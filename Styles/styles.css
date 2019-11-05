@@ -1,1 +1,11 @@
-Stylesdumy 
+body, head {
+    margin: 0;
+    padding: 0;
+}
+#container{
+    background-color: #4046A1;
+}
+h1 {
+    text-align: center;
+    color:#5FC5FA;
+}
