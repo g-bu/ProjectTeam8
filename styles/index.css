@@ -1,0 +1,13 @@
+body, head {
+    margin: 0;
+    padding: 0;
+}
+#container{
+    background-color: #4046A1;
+    color:#5FC5FA;
+}
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
