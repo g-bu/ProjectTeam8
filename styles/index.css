@@ -5,9 +5,14 @@ body, head {
 #container{
     background-color: #4046A1;
     color:#5FC5FA;
+    background-image: url(/Images/logo.png);
+    background-size: contain;
+  transform: translateY(-3vh);
+}
+#firebaseui-auth-container{
+    margin-top: 25vh;
 }
 h1 {
-    font-family: 'PT Sans', sans-serif;
-    font-weight: 800;
-    text-align: center;
+  font-family: Baskerville;
+  color: #4046A1;
 }
