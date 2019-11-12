@@ -13,15 +13,49 @@
 </head>
 
 <body>
-    <div id="content"></div>
-
+    <div id="content">
+        <header>
+            <form>
+                <fieldset>
+                    <input type="text " placeholder=" Location A " />
+                    <input type="text " placeholder=" Location B " />
+                </fieldset>
+            </form>
+            <!-- Find account icon online-->
+            <span id="account"> Account </span>
+            <!-- Find home icon online-->
+            <span id="home"> Home </span>
+            <span id="reverse">Reverse </span>
+        </header>
+        <figure>
+            <img alt="interactive map">
+            <span id="se14"></span>
+            <span id="sw5"></span>
+            <span id="se12"></span>
+        </figure>
+        <footer>
+            <p id="information">information</p>
+        </footer>
+        <nav>
+                <img id="largeaccount">
+                <p> User</p>
+                <ul>
+                    <li> View Account </li>
+                    <li> Favorite Locations </li>
+                    <li> Settings </li>
+                </ul>
+            </nav>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-        var inputFrom = $("<input type="text " placeholder=" Location A "/>);
-        var inputTo = $("<input type="text " placeholder=" Location B "/>);
-
-        $(content).append(inputFrom, inputTo);
+        var inputFrom = $("<input type="
+                text " placeholder="
+                Location A "/>);
+                var inputTo = $("<input type="
+                        text " placeholder="
+                        Location B "/>);
+                        $(content).append(inputFrom, inputTo);
     </script>
 </body>
 
