@@ -2,11 +2,46 @@ body, head {
     margin: 0;
     padding: 0;
 }
-#container{
-    background-color: #4046A1;
+#content{
     color:#5FC5FA;
+    display: grid;
+    grid-template-columns: repeat(100,1vw);
+    grid-template-rows: repeat(100,1vh);
 }
 h1 {
     font-family:Baskerville;
     text-align: center;
+}
+header{
+    background-color: #4046A1;
+    grid-column: 1/ span 100;
+    grid-row: 1/span 15;
+}
+input{
+    width: 65vw;
+}
+#locationA{
+    grid-column: 20/ span 50;
+    grid-row: 5 / span 10;
+}
+#locationB{
+    grid-column: 20/span 50;
+    grid-row: 10/ span 10;
+}
+#home {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-size: 48px; 
+    float: left;
+}
+#account{
+    margin: 1vh 1vw 0vh 0vw;
+    font-size: 36px;
+    float:right;
+}
+#reverse{
+    font-size: 48px;
+    margin-right:-7vw;
+    margin-top: 6vh;
+    float: right;
 }

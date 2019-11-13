@@ -1,17 +1,21 @@
+link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+
 body, head {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-#container{
-    background-color: #4046A1;
-    color:#5FC5FA;
-    background-image: url(/Images/logo.png);
-    background-size: contain;
+#container {
+  background-color: #4046A1;
+  color: #5FC5FA;
+  background-image: url(/Images/logo.png);
+  background-size: contain;
   transform: translateY(-3vh);
 }
-#firebaseui-auth-container{
-    margin-top: 25vh;
+
+#firebaseui-auth-container {
+  margin-top: 25vh;
 }
+
 h1 {
   font-family: Baskerville;
   color: #4046A1;
