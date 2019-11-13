@@ -98,7 +98,7 @@
       .doc('se12')
       .onSnapshot(function (snap) {
         console.log('current data is...', snap.data());
-        document.getElementById('AMMENITIES' + 'HOURS' + 'NAME').innerHTML = snap.data().message;
+        document.getElementById('AMMENITIES').innerHTML = snap.data().message;
         // another way is to go snap.data()['message']
       });
    
