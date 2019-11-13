@@ -92,6 +92,17 @@
                         Location B "/>);
                         $(content).append(inputFrom, inputTo);
     </script>
+      <script>
+          //============ need to change a couple things here=====================================================================
+    db.collection('quotes')
+      .doc('789')
+      .onSnapshot(function (snap) {
+        console.log('current data is...', snap.data());
+        document.getElementById('stuff').innerHTML = snap.data().message;
+        // another way is to go snap.data()['message']
+      });
+   
+  </script>
 </body>
 
 </html>
