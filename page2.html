@@ -17,15 +17,12 @@
 
     <!-- firebase stuff -->
     <script src="scripts/body.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <!-- Optional styles and scripts of your own                                  -->
-    <!------------------------------------------------------------------------------>
-    <link rel="stylesheet" href="styles/page2.css" />
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
@@ -53,20 +50,19 @@
         <header>
             <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
             <span id="home" class="material-icons">home</span>
-            <span id="account" class="material-icons">account_box</span>
-            <span id="reverse" class="material-icons">import_export</span>
+            <div>
+                <span id="account" class="material-icons">account_box</span>
+            </div>
         </header>
+        <div id="reverse">
+            <span id="reverse" class="material-icons">import_export</span>
+        </div>
         <form>
-                <fieldset>
-                    <input id="locationA" type="text " placeholder=" Location A " />
-                    <input id="locationB" type="text " placeholder=" Location B " />
-                <!-- </fieldset>
-            </form>
-            <form id="locationB">
-                <fieldset>
-                    <input type="text " placeholder=" Location B " /> -->
-                </fieldset>
-            </form>
+            <fieldset>
+                <input id="locationA" type="text " placeholder=" Location A " />
+                <input id="locationB" type="text " placeholder=" Location B " />
+            </fieldset>
+        </form>
         <section>
             <div id="recent">
                 <span id="clock" class="material-icons">restore</span>
@@ -78,7 +74,7 @@
             </div>
         </section>
         <div id="nav">
-        <nav>
+            <nav>
                 <img id="largeaccount">
                 <p> User</p>
                 <ul>
@@ -86,7 +82,7 @@
                     <li> Favorite Locations </li>
                     <li> Settings </li>
                 </ul>
-        </nav>
+            </nav>
         </div>
     </div>
 </body>

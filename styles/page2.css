@@ -8,6 +8,10 @@ body, head {
     grid-template-columns: repeat(100,1vw);
     grid-template-rows: repeat(100,1vh);
 }
+h1 {
+    font-family:Baskerville;
+    text-align: center;
+}
 header{
     background-color: #4046A1;
     grid-column: 1/ span 100;
@@ -20,8 +24,38 @@ form{
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
 }
-#locationA {
+#locationA{
     margin-bottom: 12px;
+}
+#home {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-size: 48px; 
+    float: left;
+}
+#account{
+    margin: 1vh 1vw 0vh 0vw;
+    font-size: 36px;
+    float:right; 
+}
+#reverse{
+    grid-column: 85/ span 5;
+    grid-row: 7/ span 10;
+    font-size: 48px;
+    margin-right: 1vw;
+}
+input{
+    width:65vw;
+}
+form{
+    grid-column: 20/ span 50;
+    grid-row: 5/ span 10;
+}
+#locationA{
+    margin-bottom: 12px;
+}
+#nav {
+    display:none;
 }
 /* --------------------------------
     Section for Recent and Favorites
@@ -71,23 +105,3 @@ section {
     margin-bottom: 0%;
 }
 
-#nav {
-    grid-row: 70/ span 20;
-}
-#home {
-    margin-top: 5vh;
-    margin-left: 3vw;
-    font-size: 48px; 
-    float: left;
-}
-#account{
-    margin: 1vh 1vw 0vh 0vw;
-    font-size: 36px;
-    float:right;
-}
-#reverse{
-    font-size: 48px;
-    margin-right:-7vw;
-    margin-top: 6vh;
-    float: right;
-}
