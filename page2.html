@@ -12,10 +12,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <!-- firebase stuff -->
+    <script src="scripts/body.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Optional styles and scripts of your own                                  -->
+    <!------------------------------------------------------------------------------>
+    <link rel="stylesheet" href="styles/page2.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
+            authDomain: 'class-shortcut-tool.firebaseapp.com',
+            databaseURL: 'https://class-shortcut-tool.firebaseio.com',
+            projectId: 'class-shortcut-tool',
+            storageBucket: 'class-shortcut-tool.appspot.com',
+            messagingSenderId: '580475693421',
+            appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
 </head>
 
 <body>
-       <div id="content">
+    <div id="content">
         <header>
             <form>
                 <fieldset>
@@ -40,14 +73,15 @@
             </div>
         </section>
         <nav>
-                <img id="largeaccount">
-                <p> User</p>
-                <ul>
-                    <li> View Account </li>
-                    <li> Favorite Locations </li>
-                    <li> Settings </li>
-                </ul>
-            </nav>
+            <img id="largeaccount">
+            <p> User</p>
+            <ul>
+                <li> View Account </li>
+                <li> Favorite Locations </li>
+                <li> Settings </li>
+            </ul>
+        </nav>
     </div>
 </body>
+
 </html>
