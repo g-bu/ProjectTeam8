@@ -15,18 +15,17 @@ h1 {
 header{
     background-color: #4046A1;
     grid-column: 1/ span 100;
-    grid-row: 1/span 15;
+    grid-row: 1/span 18;
 }
 input{
     width: 65vw;
 }
-#locationA{
+form{
     grid-column: 20/ span 50;
-    grid-row: 5 / span 10;
+    grid-row: 5/ span 10;
 }
-#locationB{
-    grid-column: 20/span 50;
-    grid-row: 10/ span 10;
+#locationA{
+    margin-bottom: 12px;;
 }
 #home {
     margin-top: 5vh;
