@@ -46,8 +46,10 @@ form{
 }
 figure{
     background-image: url(/Images/Interactive.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-repeat: none;
+    background-position:fixed;
     grid-column: 1/span 100;
     grid-row: 19/ span 81;
 }
