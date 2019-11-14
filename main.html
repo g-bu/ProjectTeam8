@@ -1,5 +1,6 @@
 <html>
 
+<<<<<<< HEAD
 <head>
   <title>Main Navigation Page</title>
   <meta charset="utf-8" />
@@ -14,6 +15,55 @@
 
   <!-- firebase stuff -->
   <script src="scripts/body.js"></script>
+=======
+  <body>
+    <div id="content">
+        <header>
+            <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+            <span id="home" class="material-icons">home</span>
+            <div>
+                <span id="account" class="material-icons">account_box</span>
+            </div>
+        </header>
+        <div id="reverse">
+            <span id="reverse" class="material-icons">import_export</span>
+        </div>
+        <form>
+            <fieldset>
+                <input id="locationA" type="text " placeholder=" Location A " />
+                <input id="locationB" type="text " placeholder=" Location B " />
+            </fieldset>
+        </form>
+        <figure>
+            <!-- <span id="se14"></span>
+            <span id="sw5"></span>
+            <span id="se12"></span> -->
+        </figure>
+        <footer>
+            <p id="information">information</p>
+        </footer>
+        <nav>
+            <img id="largeaccount">
+            <p> User</p>
+            <ul>
+                <li> View Account </li>
+                <li> Favorite Locations </li>
+                <li> Settings </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Firebase stuff -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Optional styles and scripts of your own                                  -->
+    <!------------------------------------------------------------------------------>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/body.js"></script>
+>>>>>>> 0519f6b8b0a4b2aeb6ac961e16c31e28f3402fc3
 
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
@@ -102,4 +152,24 @@
   </div>
 </body>
 
+<<<<<<< HEAD
+=======
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script>
+      var inputFrom = $('<input type="text" placeholder="Location A"/>');
+      var inputTo = $('<input type="text " placeholder=" Location B "/>');
+      $('#content').append(inputFrom, inputTo);
+    </script> -->
+    <script>
+      //============ need to change a couple things here=====================================================================
+      db.collection('Users')
+        .doc('YI7AbuNz30GooRtldHJZ')
+        .onSnapshot(function(snap) {
+          console.log('this is working test...', snap.data());
+          document.getElementById('viewAccountTest').innerHTML = snap.data().message;
+          // another way is to go snap.data()['message']
+        });
+    </script>
+  </body>
+>>>>>>> 0519f6b8b0a4b2aeb6ac961e16c31e28f3402fc3
 </html>
