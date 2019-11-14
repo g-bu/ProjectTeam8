@@ -13,23 +13,46 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
+  <!-- firebase stuff -->
+  <script src="scripts/body.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-  <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-  <!--Firebase ui , pre-built web UI -->
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <script type="text/javascript" src="Scripts/login.js"></script>
+  <!-- Optional styles and scripts of your own                                  -->
+  <!------------------------------------------------------------------------------>
+  <link rel="stylesheet" href="styles/index.css" />
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
+      authDomain: 'class-shortcut-tool.firebaseapp.com',
+      databaseURL: 'https://class-shortcut-tool.firebaseio.com',
+      projectId: 'class-shortcut-tool',
+      storageBucket: 'class-shortcut-tool.appspot.com',
+      messagingSenderId: '580475693421',
+      appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
 </head>
 
 <body>
-    <div id="container">
-      <h1>hi</h1>
-      <div id="firebaseui-auth-container"></div>
-      <div id="loader">Loading...</div>
-      <script type="text/javascript" src="Scripts/body.js"></script>
+  <div id="container">
+    <h1>hi</h1>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+    <script type="text/javascript" src="Scripts/body.js"></script>
 </body>
 
 </html>
