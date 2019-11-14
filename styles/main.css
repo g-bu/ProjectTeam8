@@ -17,16 +17,6 @@ header{
     grid-column: 1/ span 100;
     grid-row: 1/span 18;
 }
-input{
-    width: 65vw;
-}
-form{
-    grid-column: 20/ span 50;
-    grid-row: 5/ span 10;
-}
-#locationA{
-    margin-bottom: 12px;;
-}
 #home {
     margin-top: 5vh;
     margin-left: 3vw;
@@ -36,11 +26,38 @@ form{
 #account{
     margin: 1vh 1vw 0vh 0vw;
     font-size: 36px;
-    float:right;
+    float:right; 
 }
 #reverse{
+    grid-column: 85/ span 5;
+    grid-row: 8/ span 10;
     font-size: 48px;
-    margin-right:-7vw;
-    margin-top: 6vh;
-    float: right;
+    margin-right: 1vw;
+}
+input{
+    width:65vw;
+}
+form{
+    grid-column: 20/ span 50;
+    grid-row: 5/ span 10;
+}
+#locationA{
+    margin-bottom: 12px;;
+}
+figure{
+    background-image: url(/Images/Interactive.jpg);
+    background-size: cover;
+    background-repeat: none;
+    grid-column: 1/span 100;
+    grid-row: 19/ span 81;
+}
+#interactive{
+    width: auto;
+    height: 55vh;
+}
+nav {
+    display:none;
+}
+footer{
+    display:none;
 }
