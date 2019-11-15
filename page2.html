@@ -3,8 +3,9 @@
 
 <head>
     <title>Recent Locations</title>
-    <meta charset:"utf-8" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="styles/page2.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bootstrap for Mobile-first -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,15 +17,12 @@
 
     <!-- firebase stuff -->
     <script src="scripts/body.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <!-- Optional styles and scripts of your own                                  -->
-    <!------------------------------------------------------------------------------>
-    <link rel="stylesheet" href="styles/page2.css" />
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
@@ -47,40 +45,49 @@
     </script>
 </head>
 
-<body>g
+<body>
     <div id="content">
         <header>
-            <form>
-                <fieldset>
-                    <input type="text " placeholder=" Location A " />
-                    <input type="text " placeholder=" Location B " />
-                </fieldset>
-            </form>
-            <!-- Find account icon online-->
-            <span id="account"> Account </span>
-            <!-- Find home icon online-->
-            <span id="home"> Home </span>
-            <span id="reverse">Reverse </span>
-        </header>
-        <section>
-            <div id="recent">
-                <img id="clock">
-                <h1>Recent Locations</h1>
+            <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+            <span id="home" class="material-icons">home</span>
+            <div>
+                <span id="account" class="material-icons">account_box</span>
             </div>
-            <div id="favorites">
-                <img id="star">
-                <h1>Favorites</h1>
+        </header>
+        <div id="reverse">
+            <span id="reverse" class="material-icons">import_export</span>
+        </div>
+        <form>
+            <fieldset>
+                <input id="locationA" type="text " placeholder=" Location A " />
+                <input id="locationB" type="text " placeholder=" Location B " />
+            </fieldset>
+        </form>
+        <section id="recentSection">
+            <div id="recent">
+                <span id="clock" class="material-icons">restore</span>
+                <h1 id="recentTitle">Recent Locations</h1>
+            </div>
+            <div id="innerLocations">SW5</div>
+            <div id="innerLocations">SE12</div>
+        </section>
+        <section id="favoriteSection">
+            <div id="favorite">
+                <span id="star" class="material-icons">star</span>
+                <h1 id="favoriteTitle">Favorites</h1>
             </div>
         </section>
-        <nav>
-            <img id="largeaccount">
-            <p> User</p>
-            <ul>
-                <li> View Account </li>
-                <li> Favorite Locations </li>
-                <li> Settings </li>
-            </ul>
-        </nav>
+        <div id="nav">
+            <nav>
+                <img id="largeaccount">
+                <p> User</p>
+                <ul>
+                    <li> View Account </li>
+                    <li> Favorite Locations </li>
+                    <li> Settings </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </body>
 

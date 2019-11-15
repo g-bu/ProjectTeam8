@@ -2,12 +2,118 @@ body, head {
     margin: 0;
     padding: 0;
 }
-#container{
-    background-color: #4046A1;
+#content{
     color:#5FC5FA;
-
+    display: grid;
+    grid-template-columns: repeat(100,1vw);
+    grid-template-rows: repeat(100,1vh);
 }
 h1 {
     font-family:Baskerville;
     text-align: center;
+}
+header{
+    background-color: #4046A1;
+    grid-column: 1/ span 100;
+    grid-row: 1/span 18;
+}
+input{
+    width: 65vw;
+}
+form{
+    grid-column: 20/ span 50;
+    grid-row: 5/ span 10;
+}
+#locationA{
+    margin-bottom: 12px;
+}
+#home {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-size: 48px; 
+    float: left;
+}
+#account{
+    margin: 1vh 1vw 0vh 0vw;
+    font-size: 36px;
+    float:right; 
+}
+#reverse{
+    grid-column: 85/ span 5;
+    grid-row: 7/ span 10;
+    font-size: 48px;
+    margin-right: 1vw;
+}
+input{
+    width:65vw;
+}
+form{
+    grid-column: 20/ span 50;
+    grid-row: 5/ span 10;
+}
+#locationA{
+    margin-bottom: 12px;
+}
+#nav {
+    display:none;
+}
+/* --------------------------------
+    Section for Recent and Favorites
+--------------------------------------*/
+#recentSection {
+    grid-column: 1/ span 100;
+    grid-row: 19/ span 20;
+    background-color: blueviolet;
+}
+#favoriteSection {
+    grid-column: 1/ span 100;
+    grid-row: 40/ span 20;
+    background-color: blueviolet;
+}
+/* --------------------------------
+    Recent Locations
+--------------------------------------*/
+#recent {
+    margin-top: 2%;
+    display: block;
+    border-bottom: solid #5fc5fa;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#clock {
+    float: left;
+}
+#recentTitle {
+    font-family: Baskerville;
+    font-size: 20px;
+    padding-left: 10%;
+    margin-bottom: 0%;
+    
+}
+/* --------------------------------
+    Favorite Locations
+--------------------------------------*/
+#favorite {
+    margin-top: 2%;
+    display: block;
+    border-bottom: solid #5fc5fa;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+#star {
+    float: left;
+}
+#favoriteTitle {
+    font-family: Baskerville;
+    font-size: 20px;
+    padding-left: 10%;
+    margin-bottom: 0%;
+}
+#innerLocations {
+    
+    width: 80vw;
+    margin-left: 10%;
+    text-align: center;
+    border-bottom: solid 1px black;
 }
