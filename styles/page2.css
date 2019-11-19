@@ -61,14 +61,15 @@ form{
     Section for Recent and Favorites
 --------------------------------------*/
 #recentSection {
+    border-top: solid 1px black;
     grid-column: 1/ span 100;
-    grid-row: 19/ span 20;
-    background-color: blueviolet;
+    grid-row: 19/ span 22;
+    background-color: #4046A1;
 }
 #favoriteSection {
     grid-column: 1/ span 100;
-    grid-row: 40/ span 20;
-    background-color: blueviolet;
+    grid-row: 40/ span 22;
+    background-color: #4046A1;
 }
 /* --------------------------------
     Recent Locations
@@ -88,6 +89,7 @@ form{
     font-size: 20px;
     padding-left: 10%;
     margin-bottom: 0%;
+    text-align: left;
     
 }
 /* --------------------------------
@@ -109,11 +111,14 @@ form{
     font-size: 20px;
     padding-left: 10%;
     margin-bottom: 0%;
+    text-align: left;
 }
-#innerLocations {
+*.innerLocations {
     
     width: 80vw;
     margin-left: 10%;
+    height: 30px;
     text-align: center;
     border-bottom: solid 1px black;
+    
 }
