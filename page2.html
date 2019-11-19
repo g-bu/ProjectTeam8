@@ -22,6 +22,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -42,6 +43,15 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
+    </script>
+    <script>
+        //============ need to change a couple things here=====================================================================
+        db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recents')
+            .onSnapshot(function (snap) {
+                console.log('this is working test...', snap.data());
+                document.getElementById('testloc').innerHTML = snap.data().message;
+                // another way is to go snap.data()['message']
+            });
     </script>
 </head>
 
@@ -97,7 +107,7 @@
             </div>
             <div class="innerLocations">SW5</div>
             <div class="innerLocations">SE12</div>
-            <div class="innerLocations"></div>
+            <div class="innerLocations" id="testloc"></div>
         </section>
         <section id="favoriteSection">
             <div id="favorite">
@@ -120,6 +130,9 @@
             </nav>
         </div>
     </div>
+    <script>
+        src = "scripts/page2.js"
+    </script>
 </body>
 
 </html>
