@@ -7,6 +7,7 @@ body, head {
     display: grid;
     grid-template-columns: repeat(100,1vw);
     grid-template-rows: repeat(100,1vh);
+    background-color:black;
 }
 h1 {
     font-family:Baskerville;
@@ -48,28 +49,43 @@ input{
     width:65vw;
 }
 form{
+        margin: 0;
+    padding: 0;
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
 }
-#locationA{
-    margin-bottom: 12px;
-}
-figure{
-    background-image: url(/Images/Interactive.jpg);
+#map{
+    /* background-image: url(../Images/Interactive.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-position:fixed;
+    background-size: contain; */
+    /* background-position:fixed; */
     grid-column: 1/span 100;
     grid-row: 19/ span 81;
+
 }
-#interactive{
-    width: auto;
-    height: 55vh;
+#sw5 {
+    grid-column: 19/span 5;
+    grid-row: 72/span 5;
+    font-size: 24px;
 }
-nav {
-    display:none;
+#se12 {
+    grid-column: 72/span 5;
+    grid-row: 58/span 5;
+    font-size: 24px;
 }
-footer{
-    display:none;
+#se14 {
+    grid-column: 90/span 5;
+    grid-row: 75/span 5;
+    font-size: 24px;
+}
+
+#map img {
+    height: 82vh;
+    width: 100vw;
+}
+#nav {
+  display:none;
+}
+#footer{
+  display:none;
 }
