@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    firebase stuff
+    <!--firebase stuff -->
     <script src="scripts/body.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
@@ -48,7 +48,10 @@
         .doc('recents')
         .onSnapshot(function(snap) {
           console.log('this is working test...', snap.data());
-          document.getElementById('tester1').innerHTML = snap.data().recent1;
+          document.getElementById('recent1').innerHTML = snap.data().recent1;
+          document.getElementById('recent2').innerHTML = snap.data().recent2;
+          document.getElementById('recent3').innerHTML = snap.data().recent3;
+
           // another way is to go snap.data()['recent1']
         });
     </script>
@@ -103,9 +106,9 @@
           <span id="clock" class="material-icons">restore</span>
           <h1 id="recentTitle">Recent Locations</h1>
         </div>
-        <div class="innerLocations">SW5</div>
-        <div class="innerLocations">SE12</div>
-        <div class="innerLocations"><span id="tester1"></span></div>
+        <div class="innerLocations" id="recent1"></div>
+        <div class="innerLocations" id="recent2"></div>
+        <div class="innerLocations" id="recent3"></div>
       </section>
       <section id="favoriteSection">
         <div id="favorite">
