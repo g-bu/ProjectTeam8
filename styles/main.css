@@ -37,8 +37,25 @@ form{
 #account{
     margin: 1vh 1vw 0vh 0vw;
     font-size: 36px;
-    float:right; 
+    float:right;
+    color:#5FC5FA;
+    background-color: #4046A1;
+    border: none;
 }
+/*---------------------------------------------
+    CSS for the Account Page Modal
+---------------------------------------------*/
+.modal-dialog {
+    width: 250px !important;
+    height: 300px;
+    float: right;
+    
+}
+.modal-content {
+    height: 150%;
+    
+}
+
 #reverse{
     grid-column: 85/ span 5;
     grid-row: 8/ span 10;
