@@ -91,7 +91,7 @@
       .doc('YI7AbuNz30GooRtldHJZ')
       .onSnapshot(function (snap) {
         console.log('this is working test...', snap.data());
-        document.getElementById('viewAccountTest').innerHTML = snap.data().message;
+        document.getElementById('viewAccountTest').innerHTML = snap.data();
         // another way is to go snap.data()['message']
       });
   </script>
