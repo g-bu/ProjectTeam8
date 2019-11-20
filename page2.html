@@ -7,12 +7,23 @@
   <link rel="stylesheet" type="text/css" href="styles/page2.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+<<<<<<< HEAD
   <!-- Bootstrap for Mobile-first -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+=======
+    <!--firebase stuff -->
+    <script src="scripts/body.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script> -->
+>>>>>>> fd6e6d009ac5c8342de422a8572aa19525c725c1
 
   firebase stuff
   <script src="scripts/body.js"></script>
@@ -27,6 +38,7 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
+<<<<<<< HEAD
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -61,6 +73,35 @@
           "recent4": ""
         }, {
           merge: true
+=======
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
+        authDomain: 'class-shortcut-tool.firebaseapp.com',
+        databaseURL: 'https://class-shortcut-tool.firebaseio.com',
+        projectId: 'class-shortcut-tool',
+        storageBucket: 'class-shortcut-tool.appspot.com',
+        messagingSenderId: '580475693421',
+        appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
+      };
+    </script>
+    <script>
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.collection('Users')
+        .doc('YI7AbuNz30GooRtldHJZ')
+        .collection('recents')
+        .doc('recents')
+        .onSnapshot(function(snap) {
+          console.log('this is working test...', snap.data());
+          document.getElementById('recent1').innerHTML = snap.data().recent1;
+          document.getElementById('recent2').innerHTML = snap.data().recent2;
+          document.getElementById('recent3').innerHTML = snap.data().recent3;
+
+          // another way is to go snap.data()['recent1']
+>>>>>>> fd6e6d009ac5c8342de422a8572aa19525c725c1
         });
       });
   </script>
@@ -101,6 +142,7 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </header>
     <div id="reverse">
       <span id="reverse" class="material-icons">import_export</span>
@@ -115,6 +157,42 @@
       <div id="recent">
         <span id="clock" class="material-icons">restore</span>
         <h1 id="recentTitle">Recent Locations</h1>
+=======
+      <form>
+        <fieldset>
+          <input id="locationA" type="text " placeholder=" Location A " />
+          <input id="locationB" type="text " placeholder=" Location B " />
+        </fieldset>
+      </form>
+      <section id="recentSection">
+        <div id="recent">
+          <span id="clock" class="material-icons">restore</span>
+          <h1 id="recentTitle">Recent Locations</h1>
+        </div>
+        <div class="innerLocations" id="recent1"></div>
+        <div class="innerLocations" id="recent2"></div>
+        <div class="innerLocations" id="recent3"></div>
+      </section>
+      <section id="favoriteSection">
+        <div id="favorite">
+          <span id="star" class="material-icons">star</span>
+          <h1 id="favoriteTitle">Favorites</h1>
+        </div>
+        <div class="innerLocations">SW5</div>
+        <div class="innerLocations"></div>
+        <div class="innerLocations"></div>
+      </section>
+      <div id="nav">
+        <nav>
+          <img id="largeaccount" />
+          <p>User</p>
+          <ul>
+            <li>View Account</li>
+            <li>Favorite Locations</li>
+            <li>Settings</li>
+          </ul>
+        </nav>
+>>>>>>> fd6e6d009ac5c8342de422a8572aa19525c725c1
       </div>
       <div class="innerLocations">SW5</div>
       <div class="innerLocations">SE12</div>
