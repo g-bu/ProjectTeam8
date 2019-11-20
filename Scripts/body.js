@@ -1,8 +1,8 @@
 
 
 
-<script>
 // Initialize the FirebaseUI Widget using Firebase. ( A new UI object)
+<script>
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 // Configuration for object
