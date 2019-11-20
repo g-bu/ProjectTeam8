@@ -127,6 +127,9 @@ form{
     border-bottom: solid 1px black; 
 }
 
+/*---------------------------------------------
+    CSS for the Account Page Modal
+---------------------------------------------*/
 .modal-dialog {
     width: 250px !important;
     height: 300px;
