@@ -12,11 +12,12 @@
 //       });
 // }
 
-document.getElementById('locationB').addEventListener('keyup', addRecent);
 
 // -----------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recents.
 // ------------------------------------------------------------------------
+document.getElementById('locationB').addEventListener('keyup', addRecent);
+
 function addRecent(e) {
   if (e.keyCode === 13) {
     console.log("test");
