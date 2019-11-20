@@ -36,7 +36,10 @@ form{
 #account{
     margin: 1vh 1vw 0vh 0vw;
     font-size: 36px;
-    float:right; 
+    float:right;
+    color:#5FC5FA;
+    background-color: #4046A1;
+    border: none;
 }
 #reverse{
     grid-column: 85/ span 5;
@@ -113,12 +116,24 @@ form{
     margin-bottom: 0%;
     text-align: left;
 }
-*.innerLocations {
-    
+/*-----------------------------------
+    Containers for the recent and favorite locations
+--------------------------------------*/
+*.innerLocations { 
     width: 80vw;
     margin-left: 10%;
     height: 30px;
     text-align: center;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px black; 
+}
+
+.modal-dialog {
+    width: 250px !important;
+    height: 300px;
+    float: right;
+    
+}
+.modal-content {
+    height: 150%;
     
 }
