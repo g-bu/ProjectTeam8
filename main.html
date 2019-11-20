@@ -132,7 +132,7 @@
 
   <script>
     firebase.auth().onAuthStateChanged(function (user) {
-    var userRef = db.collection('users').doc(user.uid);
+    var userRef = db.collection('Users').doc(Users.uid);
 
     // add a date to the history sub-collection
     userRef.collection("recents").doc("recents").set({

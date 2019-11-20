@@ -39,26 +39,6 @@
       appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
     };
   </script>
-  <script>
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    db.collection('Users')
-      .doc('YI7AbuNz30GooRtldHJZ')
-      .collection('recents')
-      .doc('recents')
-      .onSnapshot(function (snap) {
-        console.log('this is working test...', snap.data());
-        document.getElementById('recent1').innerHTML = snap.data().recent1;
-        document.getElementById('recent2').innerHTML = snap.data().recent2;
-        document.getElementById('recent3').innerHTML = snap.data().recent3;
-
-        // another way is to go snap.data()['recent1']
-      });
-  </script>
-  <script>
-    src = 'scripts/page2.js';
-  </script>
 </head>
 
 <body>
@@ -130,12 +110,32 @@
       document.getElementById("demo").innerHTML = "You wrote: " + x;
     }
   </script>
-  <script>
-    firebase.auth().onAuthStateChanged(function (Users) {
-      var userRef = db.collection('Users').doc(Users).collection("recents").doc("recents").set({
-        recent1: document.getElementById("locationB").value,
+    <script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.collection('Users')
+      .doc('YI7AbuNz30GooRtldHJZ')
+      .collection('recents')
+      .doc('recents')
+      .onSnapshot(function (snap) {
+        console.log('this is working test...', snap.data());
+        document.getElementById('recent1').innerHTML = snap.data().recent1;
+        document.getElementById('recent2').innerHTML = snap.data().recent2;
+        document.getElementById('recent3').innerHTML = snap.data().recent3;
+
+        // another way is to go snap.data()['recent1']
       });
-    })
+  </script>
+    <script>
+      firebase.auth().onAuthStateChanged(function (Users) {
+        var userRef = db.collection('Users').doc(Users).collection("recents").doc("recents").set({
+          recent1: document.getElementById("locationB").value,
+        });
+      })
+    </script>
+  <script>
+    src = 'scripts/page2.js';
   </script>
 </body>
 
