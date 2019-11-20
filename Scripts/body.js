@@ -1,8 +1,5 @@
 
-
-
 // Initialize the FirebaseUI Widget using Firebase. ( A new UI object)
-<script>
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 // Configuration for object
@@ -43,5 +40,5 @@ var uiConfig = {
 
 // The start method will wait until the DOM is loaded.
 // says to launch the ui at firebase container (line 20) , using uiConfig
+
 ui.start('#firebaseui-auth-container', uiConfig);
-</script>

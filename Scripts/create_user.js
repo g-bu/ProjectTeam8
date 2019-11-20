@@ -6,11 +6,16 @@ function createUser() {
   // use "set()" with merge (if document did not exist it will be created)
   firebase.auth().onAuthStateChanged(function(Users) {
     db.collection('Users')
-      .doc(user.uid)
+      .doc(Users.uid)
       .set(
         {
+<<<<<<< HEAD
           "name": Users.displayName,
           "email": Users.email
+=======
+          name: Users.displayName,
+          email: Users.email
+>>>>>>> 938909b99dd9cd63e5f0ee9aeeada1fba7bc74e1
         },
         { merge: true }
       );
