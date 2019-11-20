@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
-    <!-- firebase stuff -->
+    firebase stuff
     <script src="scripts/body.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
@@ -28,7 +28,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -40,16 +40,18 @@
             messagingSenderId: '580475693421',
             appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
         };
+        -- >
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+        const db = firebase.firestore(); <
+        !--
     </script>
     <script>
         //============ need to change a couple things here=====================================================================
-        db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recents')
+        db.collection('Users').doc('user.uid').collection('recents').doc('recents')
             .onSnapshot(function (snap) {
                 console.log('this is working test...', snap.data());
-                document.getElementById('testloc').innerHTML = snap.data().message;
+                document.getElementById('testerLocation').innerHTML = snap.data().message;
                 // another way is to go snap.data()['message']
             });
     </script>
@@ -80,16 +82,15 @@
             </div>
             <div class="innerLocations">SW5</div>
             <div class="innerLocations">SE12</div>
-            <div class="innerLocations" id="testloc"></div>
-        </section>
-        <section id="favoriteSection">
-            <div id="favorite">
-                <span id="star" class="material-icons">star</span>
-                <h1 id="favoriteTitle">Favorites</h1>
-            </div>
-            <div class="innerLocations">SW5</div>
-            <div class="innerLocations"></div>
-            <div class="innerLocations"></div>
+            <div class="innerLocations"> <span id="testerLocation" </span> </div> </section> <section
+                    id="favoriteSection">
+                    <div id="favorite">
+                        <span id="star" class="material-icons">star</span>
+                        <h1 id="favoriteTitle">Favorites</h1>
+                    </div>
+                    <div class="innerLocations">SW5</div>
+                    <div class="innerLocations"></div>
+                    <div class="innerLocations"></div>
         </section>
         <div id="nav">
             <nav>
