@@ -14,6 +14,9 @@
 
 document.getElementById('locationB').addEventListener('keyup', addRecent);
 
+// -----------------------------------------------------------------------
+// Gets value inputted into #locationB and write to stated user's recents.
+// ------------------------------------------------------------------------
 function addRecent(e) {
   if (e.keyCode === 13) {
     console.log("test");
@@ -30,9 +33,11 @@ function addRecent(e) {
   }
 }
 
+// -----------------------------------------------------------
+// Gets value inputted into #locationB and place it in to #demo
+// ------------------------------------------------------------
 function myFunction() {
   var x = document.getElementById("locationB").value;
+  console.log("Values entered in #locationB: " + x);
   document.getElementById("demo").innerHTML = "You wrote: " + x;
-
-  //console.log(x);
 }
