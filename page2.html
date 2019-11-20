@@ -49,7 +49,7 @@
         .onSnapshot(function(snap) {
           console.log('this is working test...', snap.data());
           document.getElementById('tester1').innerHTML = snap.data().recent1;
-          // another way is to go snap.data()['message']
+          // another way is to go snap.data()['recent1']
         });
     </script>
     <script>
