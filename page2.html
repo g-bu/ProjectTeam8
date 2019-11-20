@@ -104,12 +104,12 @@
       <div class="innerLocations"></div>
     </section>
   </div>
-  <script>
+  <!-- <script>
     function myFunction() {
       var x = document.getElementById("locationB").value;
       document.getElementById("demo").innerHTML = "You wrote: " + x;
     }
-  </script>
+  </script> -->
     <script>
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -127,16 +127,16 @@
         // another way is to go snap.data()['recent1']
       });
   </script>
-    <script>
-      firebase.auth().onAuthStateChanged(function (Users) {
-        var userRef = db.collection('Users').doc(Users).collection("recents").doc("recents").set({
-          recent1: document.getElementById("locationB").value,
-        });
-      })
-    </script>
-  <script>
-    src = 'scripts/page2.js';
-  </script>
+  <!-- <script>
+    firebase.auth().onAuthStateChanged(function (Users) {
+      var userRef = db.collection('Users').doc(Users).collection("recents").doc("recents")
+      .set({
+        recent1: document.getElementById("locationB").value,
+      });
+    })
+  </script> -->
+
+<script src='scripts/page2.js'></script>
 </body>
 
 </html>
