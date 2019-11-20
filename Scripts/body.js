@@ -2,7 +2,6 @@
 
 
 // Initialize the FirebaseUI Widget using Firebase. ( A new UI object)
-<script>
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 // Configuration for object
@@ -43,5 +42,62 @@ var uiConfig = {
 
 // The start method will wait until the DOM is loaded.
 // says to launch the ui at firebase container (line 20) , using uiConfig
+
 ui.start('#firebaseui-auth-container', uiConfig);
-</script>
+
+function setAddListener() {
+  document.getElementById("locationB").addEventListener("click", function (e) {
+
+    //---------------------------
+    // Event Handler begins here
+    //---------------------------
+    firebase.auth().onAuthStateChanged(function (user) {
+      var userRef = db.collection('users').doc(user.uid);
+
+      // add a date to the history sub-collection
+      userRef.collection("recents").doc("recents").set({
+        recent1: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      // increment total field
+      // use FieldValue.increment function to increment a field
+    //----------------------
+    // End of event handling
+    //----------------------
+
+  })
+  }
+}
+function setAddListener() {
+  document.getElementById("addBtn").addEventListener("click", function (e) {
+
+    //---------------------------
+    // Event Handler begins here
+    //---------------------------
+    firebase.auth().onAuthStateChanged(function (user) {
+      var userRef = db.collection('users').doc(user.uid);
+
+      // add a date to the history sub-collection
+      userRef.collection("history").add({
+        date: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      // increment total field
+      // use FieldValue.increment function to increment a field
+      var incByOne = firebase.firestore.FieldValue.increment(1);
+      userRef.update({
+          total: incByOne
+        })
+        .then(function () {
+          showCaffeineCount();
+        })
+        .catch(function (error) {
+          console.error("Error writing document: ", error);
+        });
+    });
+    //----------------------
+    // End of event handling
+    //----------------------
+
+  })
+}

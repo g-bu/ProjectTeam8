@@ -98,7 +98,7 @@
       <form>
         <fieldset>
           <input id="locationA" type="text " placeholder=" Location A " />
-          <input id="locationB" type="text " placeholder=" Location B " />
+          <input id="locationB" type="text " oninput="myFunction()" placeholder=" Location B " />
         </fieldset>
       </form>
       <section id="recentSection">
@@ -106,6 +106,7 @@
           <span id="clock" class="material-icons">restore</span>
           <h1 id="recentTitle">Recent Locations</h1>
         </div>
+        <p id="demo"></p>
         <div class="innerLocations" id="recent1"></div>
         <div class="innerLocations" id="recent2"></div>
         <div class="innerLocations" id="recent3"></div>
@@ -131,5 +132,18 @@
         </nav>
       </div>
     </div>
+    <script >
+    function myFunction() {
+    var x = document.getElementById("locationB").value;
+    document.getElementById("demo").innerHTML = "You wrote: " + x;
+  }
+  </script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (users) {
+        var userRef = db.collection('Users').doc(Users.uid).collection("recents").doc("recents").set({
+          recent1: document.getElementById("locationB").value,
+        });
+    }
+      </script>
   </body>
 </html>
