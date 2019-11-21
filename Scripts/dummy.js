@@ -6,3 +6,7 @@ function myFunction() {
 function refresh(){
   location.reload();
 }
+function searchPage(){
+  var page2 = "page2.html";
+  window.location = page2;
+}
