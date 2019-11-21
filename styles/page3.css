@@ -48,7 +48,18 @@ header{
 figure {
     grid-column: 1/span 100;
     grid-row: 12/ span 81;
-    background-color: teal;
+    background-color:;
+}
+figure img {
+    border: none;
+    width: 100vw;
+    height: 78vh;
+}
+#sw5se12{
+    display: inline-block;
+}
+.paths{
+    display:none;
 }
 footer {
     grid-column: 1/span 100;
@@ -59,10 +70,4 @@ footer {
     margin-top: 1vh;
     font-size: 36px;
     
-}
-#sw5se12{
-    display: inline-block;
-}
-.paths{
-    display:none;
 }
