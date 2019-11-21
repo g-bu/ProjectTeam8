@@ -78,7 +78,6 @@ form{
     /* background-position:fixed; */
     grid-column: 1/span 100;
     grid-row: 19/ span 81;
-
 }
 #sw5 {
     grid-column: 19/span 5;
