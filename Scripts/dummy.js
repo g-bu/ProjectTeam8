@@ -1,10 +1,10 @@
-function myFunction() {
-    var x = document.getElementById("locationB").value;
-    document.getElementById("demo").innerHTML = "You wrote: " + x;
-  }
 
 function refresh(){
-  location.reload();
+  var main = "main.html"
+  if (location = "main.html"){
+    location.refresh;
+  }
+  window.location = main;
 }
 function searchPage(){
   var page2 = "page2.html";
