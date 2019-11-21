@@ -62,3 +62,6 @@ function addRecent(e) {
         document.getElementById('recent2').innerHTML = snap.data().recent2;
         document.getElementById('recent3').innerHTML = snap.data().recent3;
       });
+      function refresh(){
+        location.reload();
+      }
