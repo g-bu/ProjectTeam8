@@ -1,4 +1,4 @@
-<script>
+
 // Fucntion that creates a new document in the users collection
 function createUser() {
   // if the current user logged in user
@@ -9,16 +9,11 @@ function createUser() {
       .doc(Users.uid)
       .set(
         {
-<<<<<<< HEAD
           "name": Users.displayName,
           "email": Users.email
-=======
-          name: Users.displayName,
-          email: Users.email
->>>>>>> 938909b99dd9cd63e5f0ee9aeeada1fba7bc74e1
         },
         { merge: true }
       );
   });
   }
-</script>
+  

@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <title>Main Navigation Page</title>
   <meta charset="utf-8" />
@@ -35,7 +34,7 @@
   <div id="content">
     <header>
       <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
-      <span id="home" class="material-icons">home</span>
+      <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
@@ -68,13 +67,13 @@
     </div>
     <form>
       <fieldset>
-        <input id="locationA" type="text" placeholder=" Location A" />
-        <input id="locationB" type="text" oninput="myFunction()" placeholder=" Location B " />
+        <!-- Location A and B search boxes, onclick goes to page 2, oninput adds location B to recent locations -->
+        <input id="locationA" type="text" onclick="searchPage()" placeholder=" Location A" />
+        <input id="locationB" type="text" onclick="searchPage()" oninput="myFunction()" placeholder=" Location B " />
       </fieldset>
     </form>
     <figure id="map">
       <img src="Images/Interactive.jpg">
-
     </figure>
     <div id="sw5"><i class='fas fa-map-marker-alt'></i>
     </div>

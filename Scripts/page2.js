@@ -51,6 +51,7 @@ function addRecent(e) {
 //         }
 //       }
 
+<<<<<<< HEAD
 //---------------------------------------------------
 // Reads User's Recent Locations from database and
 //      inputs values into the containers for each
@@ -69,3 +70,23 @@ db.collection('Users')
     document.getElementById('recent2').innerHTML = snap.data().recent2;
     document.getElementById('recent3').innerHTML = snap.data().recent3;
   });
+=======
+    //---------------------------------------------------
+    // Reads User's Recent Locations from database and 
+    //      inputs values into the containers for each
+    //---------------------------------------------------
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
+    db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1')
+      .onSnapshot(function (snap) {
+        console.log('this is working test...', snap.data());
+        document.getElementById('recent1').innerHTML = snap.data().recent1; // another way is to go snap.data()['recent1']
+        document.getElementById('recent2').innerHTML = snap.data().recent2;
+        document.getElementById('recent3').innerHTML = snap.data().recent3;
+      });
+      function refresh(){
+        location.reload();
+      }
+>>>>>>> 9cda8870263f5941b3f09afc5b68a09ec87085a8
