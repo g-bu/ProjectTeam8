@@ -1,4 +1,4 @@
-// -----------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recent1.
 // ------------------------------------------------------------------------
 document.getElementById('locationB').addEventListener('keyup', addRecent);
@@ -19,33 +19,33 @@ function addRecent(e) {
   }
 }
 
-// -----------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recent2
 //    after comparing to recent1. (incomplete)
 // ------------------------------------------------------------------------
-document.getElementById('locationB').addEventListener('keyup', addRecent);
+// document.getElementById('locationB').addEventListener('keyup', addRecent);
 
-function addRecent(e) {
-  if (e.keyCode === 13) {
-    console.log("test recent2");
-    e.preventDefault();
+// function addRecent(e) {
+//   if (e.keyCode === 13) {
+//     console.log("test recent2");
+//     e.preventDefault();
 
-    //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    var dbRecent2 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent2');
-    var locB = document.getElementById('locationB').value;
-    console.log(locB);
+//     //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
+//     var dbRecent2 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent2');
+//     var locB = document.getElementById('locationB').value;
+//     console.log(locB);
 
-    var dbRecent1 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
-    var recentOne = dbRecent1.onSnapshot(function (snap) {
-      console.log('this is working test...', snap.data().recent1);
-      snap.data().recent1});
-      console.log("from recent1 for recent2: " + recentOne);
-          if (locB !== recentOne)
-            dbRecent2.set({
-              "recent2": locB,
-            });
-        }
-      }
+//     var dbRecent1 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
+//     var recentOne = dbRecent1.onSnapshot(function (snap) {
+//       console.log('this is working test...', snap.data().recent1);
+//       snap.data().recent1});
+//       console.log("from recent1 for recent2: " + recentOne);
+//           if (locB !== recentOne)
+//             dbRecent2.set({
+//               "recent2": locB,
+//             });
+//         }
+//       }
 
     //---------------------------------------------------
     // Reads User's Recent Locations from database and 
