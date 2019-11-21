@@ -1,5 +1,4 @@
 // Gets value inputted into #locationB and write to stated user's recent1.
-// ------------------------------------------------------------------------
 document.getElementById('locationB').addEventListener('keyup', addRecent);
 
 function addRecent(e) {
@@ -68,6 +67,6 @@ db.collection('Users')
   .onSnapshot(function(snap) {
     console.log('this is working test...', snap.data());
     document.getElementById('recent1').innerHTML = snap.data().name; // another way is to go snap.data()['recent1']
-    document.getElementById('recent2').innerHTML = snap.data().recent2;
-    document.getElementById('recent3').innerHTML = snap.data().recent3;
+    document.getElementById('recent2').innerHTML = snap.data().name;
+    document.getElementById('recent3').innerHTML = snap.data().name;
   });
