@@ -34,33 +34,51 @@
   <script src="Scripts/dbConfig.js"> </script>
 
 </head>
-
 <body>
-  <header>
-    <span id="account"> Account </span>
-    <span id="path">SW5 to SE14 </span>
-    <!-- Find home icon online-->
-    <span class="material-icons">home</span>
-  </header>
-  <footer>
-    <span class="material-icons" style="font-size:36px;">dehaze</span>
-  </footer>
-  <aside>
-    <div>
-      <p id="description"> 2.5mins(230m) </p>
-      <img id="directions">
+  <div id="content">
+    <header>
+        <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+        <span id="home" onclick="refresh()" class="material-icons">home</span>
+        <!-- Text for the path -->
+        <p id="pathName"> SW5 <span>- - -></span> SE12</p>
+        <!-- Account Button trigger modal -->
+        <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
+          account_box
+        </button>
+        <!-- Modal for Account Button -->
+        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span id="account" class="material-icons">account_box</span>
+                <h5 class="modal-title" id="username"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div>View Account</div>
+                <div>Favorite Locations</div>
+                <div>Settings</div>
+                <div>Log Out</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <figure>
+        <!-- Image for the path  -->
+        <img id="path">
+      </figure>
+      <footer>
+        <!-- Icon for info to pop out if clicked -->
+        <span id="info" class="material-icons">menu</span>
+      </footer>
     </div>
-
-  </aside>
-  <nav>
-    <img id="largeaccount">
-    <p> User</p>
-    <ul>
-      <li> View Account </li>
-      <li> Favorite Locations </li>
-      <li> Settings </li>
-    </ul>
-  </nav>
 </body>
+<script src="scripts/body.js"></script>
+<script src="scripts/dummy.js"></script>
+<script src='scripts/page2.js'></script>
 
 </html>
