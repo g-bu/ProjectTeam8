@@ -1,44 +1,64 @@
-// function addRecent() {
-//     firebase.auth().onAuthStateChanged(function(Users) {
-//         db.collection('Users').doc(Users.uid)
-//         .collection("recents").doc("recents")
-//           .set(
-//             {
-//               "recent1": Users.displayRecent,
-//               "recent2": Users.displayRecent,
-//               "recent3": Users.displayRecent,
-//             },
-//             { merge: true });
-//       });
-// }
-
-
 // -----------------------------------------------------------------------
-// Gets value inputted into #locationB and write to stated user's recents.
+// Gets value inputted into #locationB and write to stated user's recent1.
 // ------------------------------------------------------------------------
 document.getElementById('locationB').addEventListener('keyup', addRecent);
 
 function addRecent(e) {
   if (e.keyCode === 13) {
-    console.log("test");
+    console.log("test recent1");
     e.preventDefault();
 
     //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recents');
+    var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
     var locB = document.getElementById('locationB').value;
     console.log(locB);
-  
+
     dbref.set({
       "recent1": locB,
     });
   }
 }
 
-// -----------------------------------------------------------
-// Gets value inputted into #locationB and place it in to #demo
-// ------------------------------------------------------------
-function myFunction() {
-  var x = document.getElementById("locationB").value;
-  console.log("Values entered in #locationB: " + x);
-  document.getElementById("demo").innerHTML = "You wrote: " + x;
-}
+// -----------------------------------------------------------------------
+// Gets value inputted into #locationB and write to stated user's recent2
+//    after comparing to recent1. (incomplete)
+// ------------------------------------------------------------------------
+document.getElementById('locationB').addEventListener('keyup', addRecent);
+
+function addRecent(e) {
+  if (e.keyCode === 13) {
+    console.log("test recent2");
+    e.preventDefault();
+
+    //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
+    var dbRecent2 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent2');
+    var locB = document.getElementById('locationB').value;
+    console.log(locB);
+
+    var dbRecent1 = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
+    var recentOne = dbRecent1.onSnapshot(function (snap) {
+      console.log('this is working test...', snap.data().recent1);
+      snap.data().recent1});
+      console.log("from recent1 for recent2: " + recentOne);
+          if (locB !== recentOne)
+            dbRecent2.set({
+              "recent2": locB,
+            });
+        }
+      }
+
+    //---------------------------------------------------
+    // Reads User's Recent Locations from database and 
+    //      inputs values into the containers for each
+    //---------------------------------------------------
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
+    db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1')
+      .onSnapshot(function (snap) {
+        console.log('this is working test...', snap.data());
+        document.getElementById('recent1').innerHTML = snap.data().recent1; // another way is to go snap.data()['recent1']
+        document.getElementById('recent2').innerHTML = snap.data().recent2;
+        document.getElementById('recent3').innerHTML = snap.data().recent3;
+      });
