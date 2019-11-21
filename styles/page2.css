@@ -17,12 +17,12 @@ header{
     grid-column: 1/ span 100;
     grid-row: 1/span 18;
 }
-input{
-    width: 65vw;
-}
 form{
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
+}
+input{
+    width: 65vw;
 }
 #locationA{
     margin-bottom: 12px;
@@ -46,13 +46,6 @@ form{
     grid-row: 7/ span 10;
     font-size: 48px;
     margin-right: 1vw;
-}
-input{
-    width:65vw;
-}
-form{
-    grid-column: 20/ span 50;
-    grid-row: 5/ span 10;
 }
 #locationA{
     margin-bottom: 12px;

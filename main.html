@@ -5,14 +5,14 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  
+
   <!-- Bootstrap for Mobile-first -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  
+
   <!-- map icon-->
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
@@ -28,6 +28,7 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="Scripts/dbConfig.js"> </script>
 
 </head>
 
@@ -35,7 +36,7 @@
   <div id="content">
     <header>
       <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
-      <span id="home" class="material-icons">home</span>
+      <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
@@ -68,13 +69,13 @@
     </div>
     <form>
       <fieldset>
-        <input id="locationA" type="text" placeholder=" Location A" />
-        <input id="locationB" type="text" oninput="myFunction()" placeholder=" Location B " />
+        <!-- Location A and B search boxes, onclick goes to page 2, oninput adds location B to recent locations -->
+        <input id="locationA" type="text" onclick="searchPage()" placeholder=" Location A" />
+        <input id="locationB" type="text" onclick="searchPage()" oninput="myFunction()" placeholder=" Location B " />
       </fieldset>
     </form>
     <figure id="map">
       <img src="Images/Interactive.jpg">
-
     </figure>
     <div id="sw5"><i class='fas fa-map-marker-alt'></i>
     </div>
@@ -95,30 +96,7 @@
       </ul>
     </nav>
   </div>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
-      authDomain: 'class-shortcut-tool.firebaseapp.com',
-      databaseURL: 'https://class-shortcut-tool.firebaseio.com',
-      projectId: 'class-shortcut-tool',
-      storageBucket: 'class-shortcut-tool.appspot.com',
-      messagingSenderId: '580475693421',
-      appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-  <script>
-    //============ need to change a couple things here=====================================================================
-    db.collection('Users')
-      .doc('YI7AbuNz30GooRtldHJZ')
-      .onSnapshot(function (snap) {
-        console.log('this is working test...', snap.data());
-        document.getElementById('viewAccountTest').innerHTML = snap.data();
-        // another way is to go snap.data()['message']
-      });
-  </script>
+
   <!------------------------------------------------------------------------------->
   <!-- Javascript goes here.  Create a new user in our firestore database first. -->
   <!------------------------------------------------------------------------------->
@@ -126,20 +104,17 @@
   <script src="Scripts/page2.js"></script>
   <script src="Scripts/create_user.js"></script>
 
-  <script>
-    addRecent();
-    showName();
-  </script>
+
 
   <script>
     firebase.auth().onAuthStateChanged(function (user) {
-          var userRef = db.collection('Users').doc(Users.uid);
+      var userRef = db.collection('Users').doc(user.uid);
 
-          // add a date to the history sub-collection
-          userRef.collection("recents").doc("recents").set({
-            recent1: myFunction();
-          });
-        }
+      // add a date to the history sub-collection
+      userRef.collection("recents").doc("recent1").set({
+        recent1: myFunction()
+      });
+    })
   </script>
   <script src="scripts/body.js"></script>
   <script src="scripts/dummy.js"></script>

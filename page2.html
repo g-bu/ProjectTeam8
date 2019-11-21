@@ -5,7 +5,7 @@
   <title>Recent Locations</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="styles/page2.css" />
-  
+
   <!-- Link for selecting icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <!--firebase stuff -->
   <script src="scripts/body.js"></script>
@@ -26,25 +26,15 @@
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <!-- <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script> -->
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
-      authDomain: 'class-shortcut-tool.firebaseapp.com',
-      databaseURL: 'https://class-shortcut-tool.firebaseio.com',
-      projectId: 'class-shortcut-tool',
-      storageBucket: 'class-shortcut-tool.appspot.com',
-      messagingSenderId: '580475693421',
-      appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
-    };
-  </script>
+  <script src="Scripts/dbConfig.js"> </script>
+
 </head>
 
 <body>
   <div id="content">
     <header>
 
-      <span id="home" class="material-icons">home</span>
+      <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
@@ -107,7 +97,7 @@
     </section>
   </div>
 
-<!-- Linking to java script for page 2 -->
+  <!-- Linking to java script for page 2 -->
   <script src='scripts/page2.js'></script>
 </body>
 
