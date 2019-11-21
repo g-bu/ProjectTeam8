@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <title>Main Navigation Page</title>
   <meta charset="utf-8" />
@@ -27,6 +28,7 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="Scripts/dbConfig.js"> </script>
 
 </head>
 
@@ -94,30 +96,7 @@
       </ul>
     </nav>
   </div>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
-      authDomain: 'class-shortcut-tool.firebaseapp.com',
-      databaseURL: 'https://class-shortcut-tool.firebaseio.com',
-      projectId: 'class-shortcut-tool',
-      storageBucket: 'class-shortcut-tool.appspot.com',
-      messagingSenderId: '580475693421',
-      appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-  <script>
-    //============ need to change a couple things here=====================================================================
-    db.collection('Users')
-      .doc('YI7AbuNz30GooRtldHJZ')
-      .onSnapshot(function (snap) {
-        console.log('this is working test...', snap.data());
-        document.getElementById('viewAccountTest').innerHTML = snap.data();
-        // another way is to go snap.data()['message']
-      });
-  </script>
+
   <!------------------------------------------------------------------------------->
   <!-- Javascript goes here.  Create a new user in our firestore database first. -->
   <!------------------------------------------------------------------------------->
@@ -129,13 +108,13 @@
 
   <script>
     firebase.auth().onAuthStateChanged(function (user) {
-          var userRef = db.collection('Users').doc(Users.uid);
+      var userRef = db.collection('Users').doc(user.uid);
 
-          // add a date to the history sub-collection
-          userRef.collection("recents").doc("recents").set({
-            recent1: myFunction();
-          });
-        }
+      // add a date to the history sub-collection
+      userRef.collection("recents").doc("recent1").set({
+        recent1: myFunction()
+      });
+    })
   </script>
   <script src="scripts/body.js"></script>
   <script src="scripts/dummy.js"></script>

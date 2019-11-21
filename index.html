@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
   <!-- firebase stuff -->
@@ -31,21 +31,7 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
    https://firebase.google.com/docs/web/setup#available-libraries -->
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
-      authDomain: 'class-shortcut-tool.firebaseapp.com',
-      databaseURL: 'https://class-shortcut-tool.firebaseio.com',
-      projectId: 'class-shortcut-tool',
-      storageBucket: 'class-shortcut-tool.appspot.com',
-      messagingSenderId: '580475693421',
-      appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-  </script>
+  <script src="Scripts/dbConfig.js"> </script>
 </head>
 
 <body>
@@ -53,7 +39,7 @@
     <div id="logo"> <img alt="logo" src="Images/logo.png"></div>
     <div id="firebaseui-auth-container"></div>
     <script type="text/javascript" src="Scripts/body.js"></script>
-    </div>
+  </div>
 </body>
 
 </html>

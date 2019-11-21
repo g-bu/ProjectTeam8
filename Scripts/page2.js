@@ -1,4 +1,3 @@
-// ------------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recent1.
 // ------------------------------------------------------------------------
 document.getElementById('locationB').addEventListener('keyup', addRecent);
@@ -9,20 +8,24 @@ function addRecent(e) {
     e.preventDefault();
 
     //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    var dbref = db
-      .collection('Users')
-      .doc('YI7AbuNz30GooRtldHJZ')
-      .collection('recents')
-      .doc('recent1');
-    var locB = document.getElementById('locationB').value;
-    console.log(locB);
+    firebase.auth().onAuthStateChanged(function(user) {
+      console.log('in add recent..' + user.uid);
 
-    dbref.set({
-      name: locB
+      var dbref = db
+        .collection('Users')
+        .doc('user.uid')
+        .collection('recents')
+        .doc('recent1');
+      var locB = document.getElementById('locationB').value;
+      console.log(locB);
+      console.log(user.uid);
+
+      dbref.set({
+        name: locB
+      });
     });
   }
 }
-
 // ------------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recent2
 //    after comparing to recent1. (incomplete)
@@ -55,12 +58,12 @@ function addRecent(e) {
     // Reads User's Recent Locations from database and 
     //      inputs values into the containers for each
     //---------------------------------------------------
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
     //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1')
-      .onSnapshot(function (snap) {
+    db.collection('Users')
+    .doc('YI7AbuNz30GooRtldHJZ')
+    .collection('recents')
+    .doc('recent1')
+    .onSnapshot(function(snap) {
         console.log('this is working test...', snap.data());
         document.getElementById('recent1').innerHTML = snap.data().name; // another way is to go snap.data()['recent1']
         document.getElementById('recent2').innerHTML = snap.data().recent2;
