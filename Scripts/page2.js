@@ -1,10 +1,11 @@
 // ------------------------------------------------------------------------
+
 // Gets value inputted into #locationB and write to stated user's recent1.
 document.getElementById('locationB').addEventListener('keyup', addRecent);
 
 function addRecent(e) {
   if (e.keyCode === 13) {
-    console.log("enter key pressed");
+    console.log('enter key pressed');
     e.preventDefault();
     var locB = document.getElementById('locationB').value;
 
@@ -16,24 +17,24 @@ function addRecent(e) {
     // dbref.set({
     //   "recent1": locB,
 
-    firebase.auth().onAuthStateChanged(function (user) {
-      db.collection('Users').doc(user.uid).get()
-        .then(function (snapshot) {
-
+    firebase.auth().onAuthStateChanged(function(user) {
+      db.collection('Users')
+        .doc(user.uid)
+        .get()
+        .then(function(snapshot) {
           console.log(snapshot.data().name);
-          snapshot.forEach(function (doc) {
+          snapshot.forEach(function(doc) {
             // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
             var dbRecent = doc.data().name;
-            console.log("names of each recent: ", dbRecent);
+            console.log('names of each recent: ', dbRecent);
 
-            var grabName = snapshot.child("recent1/name").val();
+            var grabName = snapshot.child('recent1/name').val();
             if (grabName === null) {
               dbref.set({
-                "name": locB,
-              })
+                name: locB
+              });
             }
-
-          })
+          });
         });
     });
   }
@@ -76,7 +77,7 @@ db.collection('Users')
   .doc('YI7AbuNz30GooRtldHJZ')
   .collection('recents')
   .doc('recent1')
-  .onSnapshot(function (snap) {
+  .onSnapshot(function(snap) {
     console.log('this is working test...', snap.data());
     document.getElementById('recent1').innerHTML = snap.data().name; // another way is to go snap.data()['recent1']
     document.getElementById('recent2').innerHTML = snap.data().name;
@@ -84,8 +85,8 @@ db.collection('Users')
   });
 
 function refresh() {
-  var main = "main.html"
-  if (location = "main.html") {
+  var main = 'main.html';
+  if ((location = 'main.html')) {
     location.refresh;
   }
   window.location = main;
