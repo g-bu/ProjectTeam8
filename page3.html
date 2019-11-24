@@ -15,6 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- firebase stuff -->
+
   <script src="scripts/body.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
@@ -25,47 +26,64 @@
   <!-- Optional styles and scripts of your own                                  -->
   <!------------------------------------------------------------------------------>
   <link rel="stylesheet" href="styles/page3.css" />
+  <script src="Scripts/dbConfig.js"> </script>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-  <script src="Scripts/dbConfig.js"> </script>
 
 </head>
+
 <body>
   <div id="content">
     <header>
-        <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
-        <span id="home" onclick="refresh()" class="material-icons">home</span>
-        <!-- Text for the path -->
-        <p id="pathName"> SW5 <span>- - -></span> SE12</p>
-        <!-- Account Button trigger modal -->
-        <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
-          account_box
-        </button>
-        <!-- Modal for Account Button -->
-        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <span id="account" class="material-icons">account_box</span>
-                <h5 class="modal-title" id="username"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div>View Account</div>
-                <div>Favorite Locations</div>
-                <div>Settings</div>
-                <div>Log Out</div>
-              </div>
+      <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+      <span id="home" onclick="refresh()" class="material-icons">home</span>
+      <!-- Text for the path -->
+      <p id="pathName"> SW5 <span>- - -></span> SE12</p>
+      <!-- Account Button trigger modal -->
+      <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
+        account_box
+      </button>
+      <!-- Modal for Account Button -->
+      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span id="account" class="material-icons">account_box</span>
+              <h5 class="modal-title" id="username"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>View Account</div>
+              <div>Favorite Locations</div>
+              <div>Settings</div>
+              <div>Log Out</div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+      </div>
+    </header>
+    <figure>
+      <!-- Image for the path  -->
+      <img id="path">
+    </figure>
+    <footer>
+      <!-- Icon for info to pop out if clicked -->
+      <span id="info" class="material-icons" onclick="showInfo()">menu</span>
+      <img class="paths" id="sw5se12" alt="path1">
+      <img class="paths" id="sw5se14" alt="path2">
+      <img class="paths" id="se12se14" alt="path3">
+
+    </footer>
+  </div>
+=======
       </header>
       <figure>
         <!-- Image for the path  -->
@@ -79,6 +97,7 @@
         
       </footer>
     </div>
+>>>>>>> 3a2a87fbd58495109fc9224697630669e5edeb5a
 </body>
 <script src="scripts/body.js"></script>
 <script src="scripts/dummy.js"></script>
