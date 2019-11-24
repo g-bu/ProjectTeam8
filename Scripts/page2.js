@@ -9,7 +9,8 @@ function addRecent(e) {
     var locB = document.getElementById('locationB').value;
 
     // //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
+    // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
+    // dbref.orderBy("name").limit(3);
     // var locB = document.getElementById('locationB').value;
     // console.log(locB);
 
@@ -17,7 +18,7 @@ function addRecent(e) {
     //   "recent1": locB,
 
     firebase.auth().onAuthStateChanged(function (user) {
-      db.collection('Users').doc(user.uid).get()
+      db.collection('Users').doc(user.uid).collection(recents).get()
         .then(function (snapshot) {
 
           console.log(snapshot.data().name);
@@ -29,7 +30,7 @@ function addRecent(e) {
             var grabName = snapshot.child("recent1/name").val();
             if (grabName === null) {
               dbref.set({
-                "name": locB,
+                "name": locB ,
               })
             }
 
