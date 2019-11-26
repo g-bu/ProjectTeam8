@@ -1,46 +1,49 @@
-// ------------------------------------------------------------------------
+// // ------------------------------------------------------------------------
+// // Gets value inputted into #locationB and write to stated user's recent1.
+// document.getElementById('locationB').addEventListener('keyup', addRecent);
 
-// Gets value inputted into #locationB and write to stated user's recent1.
-document.getElementById('locationB').addEventListener('keyup', addRecent);
+// function addRecent(e) {
+//   if (e.keyCode === 13) {
+//     console.log("enter key pressed");
+//     e.preventDefault();
 
-function addRecent(e) {
-  if (e.keyCode === 13) {
-    console.log('enter key pressed');
-    e.preventDefault();
-    var locB = document.getElementById('locationB').value;
+//     searchPage();
+//     var locA = document.getElementById('LocationA').value;
+//   }
 
-    // //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
-    // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
-    // dbref.orderBy("name").limit(3);
-    // var locB = document.getElementById('locationB').value;
-    // console.log(locB);
 
-    // dbref.set({
-    //   "recent1": locB,
+//   // Trying to place in search function
 
-    firebase.auth().onAuthStateChanged(function(user) {
-      db.collection('Users')
-        .doc(user.uid)
-        .collection(recents)
-        .get()
-        .then(function(snapshot) {
-          console.log(snapshot.data().name);
-          snapshot.forEach(function(doc) {
-            // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
-            var dbRecent = doc.data().name;
-            console.log('names of each recent: ', dbRecent);
 
-            var grabName = snapshot.child('recent1/name').val();
-            if (grabName === null) {
-              dbref.set({
-                name: locB
-              });
-            }
-          });
-        });
-    });
-  }
-}
+//   // //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
+//   // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
+//   // var locB = document.getElementById('locationB').value;
+//   // console.log(locB);
+
+//   // dbref.set({
+//   //   "recent1": locB,
+
+//   firebase.auth().onAuthStateChanged(function (user) {
+//     db.collection('Users').doc(user.uid).get()
+//       .then(function (snapshot) {
+
+//         console.log(snapshot.data().name);
+//         snapshot.forEach(function (doc) {
+//           // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
+//           var dbRecent = doc.data().name;
+//           console.log("names of each recent: ", dbRecent);
+
+//           var grabName = snapshot.child("recent1/name").val();
+//           if (grabName === null) {
+//             dbref.set({
+//               "name": locB,
+//             })
+//           }
+
+//         })
+//       });
+//   });
+// }
 // ------------------------------------------------------------------------
 // Gets value inputted into #locationB and write to stated user's recent2
 //    after comparing to recent1. (incomplete)
@@ -93,3 +96,45 @@ function refresh() {
   }
   window.location = main;
 }
+
+// Event listener that will go to location
+document.getElementById('locationB').addEventListener('keyup', goLocation);
+function goLocation(e) {
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    console.log("enter key pressed");
+    // searchPage(); 
+    var locA = document.getElementById('locationA').value;
+    var locB = document.getElementById('locationB').value;
+    console.log("locA = " + locA + " locB = " + locB);
+    var location;
+    location = "" + locA + locB;
+    // keeps saying sw5se12 is undefined
+    // Testing switch case
+    switch (location) {
+      case ("sw5se12"):
+        // Was testing jquery style selector
+        $("#sw5se12").css("display","grid");
+        // To show none the container without the image and place our own container with everything in it
+        $("#content").css("display","none");
+        console.log("path set");
+        break;
+      case ("sw5se14"):
+        // Dom style selector
+        $("#sw5se14").css("display","grid");
+        break;
+      case ("se12se14"):
+          $("#se12se14").css("display","grid");
+        break;
+      default:
+        console.log("Incorrect value");
+        break;
+    }
+    // searchPage();
+
+  }
+}
+// function searchPage() {
+//   var page3 = "page3.html";
+//   window.location = page3;
+// }
