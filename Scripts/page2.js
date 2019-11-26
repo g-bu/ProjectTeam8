@@ -82,7 +82,7 @@ db.collection('Users')
   .doc('YI7AbuNz30GooRtldHJZ')
   .collection('recents')
   .doc('recent1')
-  .onSnapshot(function (snap) {
+  .onSnapshot(function(snap) {
     console.log('this is working test...', snap.data());
     document.getElementById('recent1').innerHTML = snap.data().name; // another way is to go snap.data()['recent1']
     document.getElementById('recent2').innerHTML = snap.data().name;
@@ -90,8 +90,8 @@ db.collection('Users')
   });
 
 function refresh() {
-  var main = "main.html"
-  if (location = "main.html") {
+  var main = 'main.html';
+  if ((location = 'main.html')) {
     location.refresh;
   }
   window.location = main;
