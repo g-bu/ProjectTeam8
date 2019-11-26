@@ -89,6 +89,7 @@ db.collection('Users')
     document.getElementById('recent3').innerHTML = snap.data().name;
   });
 
+// Function for home button to return to main page
 function refresh() {
   var main = 'main.html';
   if ((location = 'main.html')) {
@@ -107,8 +108,7 @@ function goLocation(e) {
     var locA = document.getElementById('locationA').value;
     var locB = document.getElementById('locationB').value;
     console.log("locA = " + locA + " locB = " + locB);
-    var location;
-    location = "" + locA + locB;
+    var location = "" + locA + locB;
     // keeps saying sw5se12 is undefined
     // Testing switch case
     switch (location) {
@@ -117,14 +117,20 @@ function goLocation(e) {
         $("#sw5se12").css("display","grid");
         // To show none the container without the image and place our own container with everything in it
         $("#content").css("display","none");
+        $("#directionContainer").css("display","grid");
+        $('#account').css("margin","-7vh");
         console.log("path set");
         break;
       case ("sw5se14"):
         // Dom style selector
         $("#sw5se14").css("display","grid");
+        $("#content").css("display","none");
+        $("#directionContainer").css("display","grid");
         break;
       case ("se12se14"):
           $("#se12se14").css("display","grid");
+          $("#content").css("display","none");
+          $("#directionContainer").css("display","grid");
         break;
       default:
         console.log("Incorrect value");

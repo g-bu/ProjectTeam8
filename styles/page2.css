@@ -1,58 +1,75 @@
-body, head {
+/* =====================================================
+#content css for page with recent and favorite locations
+======================================================= */
+body,
+head {
     margin: 0;
     padding: 0;
 }
-#content{
-    color:#5FC5FA;
+
+#content {
+    background-color: #4046A1;
+    color: #5FC5FA;
     display: grid;
-    grid-template-columns: repeat(100,1vw);
-    grid-template-rows: repeat(100,1vh);
+    grid-template-columns: repeat(100, 1vw);
+    grid-template-rows: repeat(100, 1vh);
 }
+
 h1 {
-    font-family:Baskerville;
+    font-family: Baskerville;
     text-align: center;
 }
-header{
+
+header {
     background-color: #4046A1;
     grid-column: 1/ span 100;
     grid-row: 1/span 18;
 }
-form{
+
+form {
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
 }
-input{
+
+input {
     width: 65vw;
 }
-#locationA{
+
+#locationA {
     margin-bottom: 12px;
 }
+
 #home {
     margin-top: 5vh;
     margin-left: 3vw;
-    font-size: 48px; 
+    font-size: 48px;
     float: left;
 }
-#account{
+
+#account {
     margin: 1vh 1vw 0vh 0vw;
     font-size: 36px;
-    float:right;
-    color:#5FC5FA;
+    float: right;
+    color: #5FC5FA;
     background-color: #4046A1;
     border: none;
 }
-#reverse{
+
+#reverse {
     grid-column: 85/ span 5;
     grid-row: 7/ span 10;
     font-size: 48px;
     margin-right: 1vw;
 }
-#locationA{
+
+#locationA {
     margin-bottom: 12px;
 }
+
 #nav {
-    display:none;
+    display: none;
 }
+
 /* --------------------------------
     Section for Recent and Favorites
 --------------------------------------*/
@@ -62,11 +79,13 @@ input{
     grid-row: 19/ span 22;
     background-color: #4046A1;
 }
+
 #favoriteSection {
     grid-column: 1/ span 100;
     grid-row: 40/ span 22;
     background-color: #4046A1;
 }
+
 /* --------------------------------
     Recent Locations
 --------------------------------------*/
@@ -77,17 +96,20 @@ input{
     margin-left: 5%;
     margin-right: 5%;
 }
+
 #clock {
     float: left;
 }
+
 #recentTitle {
     font-family: Baskerville;
     font-size: 20px;
     padding-left: 10%;
     margin-bottom: 0%;
     text-align: left;
-    
+
 }
+
 /* --------------------------------
     Favorite Locations
 --------------------------------------*/
@@ -97,11 +119,13 @@ input{
     border-bottom: solid #5fc5fa;
     margin-left: 5%;
     margin-right: 5%;
-    
+
 }
+
 #star {
     float: left;
 }
+
 #favoriteTitle {
     font-family: Baskerville;
     font-size: 20px;
@@ -109,45 +133,92 @@ input{
     margin-bottom: 0%;
     text-align: left;
 }
+
 /*-----------------------------------
     Containers for the recent and favorite locations
 --------------------------------------*/
-*.innerLocations { 
+*.innerLocations {
     width: 80vw;
     margin-left: 10%;
     height: 30px;
     text-align: center;
-    border-bottom: solid 1px black; 
+    border-bottom: solid 1px black;
 }
 
-/*---------------------------------------------
+/* =======================================
     CSS for the Account Page Modal
----------------------------------------------*/
+========================================== */
 .modal-dialog {
     width: 250px !important;
     height: 300px;
     float: right;
-    
+
 }
+
 .modal-content {
     height: 150%;
-    
+
+}
+
+/* =====================================================
+#directionContainer css for page showing directions and path
+======================================================= */
+#directionContainer{
+    background-color: #4046A1;
+    color:#5FC5FA;
+}
+
+#account2{
+    /* margin-top: -7vh; */
+    font-size: 36px;
+    float:right;
+    color:#5FC5FA;
+    background-color: #4046A1;
+    border: none;
+}
+#home {
+    margin-top: 2vh;
+    margin-left: 3vw;
+    font-size: 40px; 
+    float: left;
 }
 /* TESTING FIGURE */
 figure {
     grid-column: 1/span 100;
-    grid-row: 10/ span 85;
+    grid-row: 20/ span 80;
 }
+
 figure img {
     width: 100vw;
     height: 80vh;
 }
-#sw5se12{
+
+#pathName {
+    margin-top: 2vh;
+    font-size: 15pt;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-#sw5se14{
+
+#sw5se12 {}
+
+#sw5se14 {}
+
+#se12se14 {}
+
+.paths {
+    display: none;
 }
-#se12se14{
+
+footer {
+    grid-column: 1/span 100;
+    grid-row: 90/ span 10;
+    text-align: center;
 }
-.paths{
-    display:none;
+
+#info {
+    margin-top: 1vh;
+    font-size: 36px;
+
 }
