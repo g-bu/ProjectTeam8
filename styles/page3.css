@@ -11,7 +11,7 @@ body, head {
 }
 header{
     grid-column: 1/ span 100;
-    grid-row: 1/span 12;
+    grid-row: 1/span 10;
 }
 #home {
     margin-top: 2vh;
@@ -20,7 +20,7 @@ header{
     float: left;
 }
 #account{
-    margin-top: -9vh;
+    margin-top: -7vh;
     font-size: 36px;
     float:right;
     color:#5FC5FA;
@@ -47,16 +47,18 @@ header{
 }
 figure {
     grid-column: 1/span 100;
-    grid-row: 12/ span 81;
-    background-color:;
+    grid-row: 10/ span 85;
 }
 figure img {
     border: none;
     width: 100vw;
-    height: 78vh;
+    height: 80vh;
 }
 #sw5se12{
-    display: inline-block;
+}
+#sw5se14{
+}
+#se12se14{
 }
 .paths{
     display:none;

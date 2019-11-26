@@ -133,3 +133,21 @@ input{
     height: 150%;
     
 }
+/* TESTING FIGURE */
+figure {
+    grid-column: 1/span 100;
+    grid-row: 10/ span 85;
+}
+figure img {
+    width: 100vw;
+    height: 80vh;
+}
+#sw5se12{
+}
+#sw5se14{
+}
+#se12se14{
+}
+.paths{
+    display:none;
+}
