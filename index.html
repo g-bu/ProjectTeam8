@@ -2,8 +2,17 @@
 <html>
 
 <head>
-  <meta charset="Utf-8">
-  <meta title="Class Shortcut Tools">
+  <meta charset="Utf-8"/>
+  <title>Class Shortcut Tools</title>
+  <link rel="stylesheet" type="text/css" href="styles/index.css" />
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- firebase stuff -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
   <!-- Bootstrap for Mobile-first -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,33 +22,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <link rel="stylesheet" type="text/css" href="styles/index.css" />
-  <!-- firebase stuff -->
-  <script src="Scripts/create_user.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <!-- Optional styles and scripts of your own                                  -->
-  <!------------------------------------------------------------------------------>
-  <link rel="stylesheet" href="styles/index.css" />
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-   https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script src="Scripts/dbConfig.js"> </script>
 </head>
 
 <body>
   <div id="container">
     <div id="logo"> <img alt="logo" src="Images/logo.png"></div>
     <div id="firebaseui-auth-container"></div>
-    <script type="text/javascript" src="Scripts/body.js"></script>
   </div>
+
+  <!-- Linking our own scripts -->
+  <script src="Scripts/login.js"></script>
+  <script src="Scripts/body.js"></script>
 </body>
 
 </html>

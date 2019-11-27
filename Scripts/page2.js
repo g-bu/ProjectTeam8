@@ -118,7 +118,7 @@ function goLocation(e) {
         // To show none the container without the image and place our own container with everything in it
         $("#content").css("display","none");
         $("#directionContainer").css("display","grid");
-        $('#account').css("margin","-7vh");
+        // $('#account').css("margin","-7vh"); Still need to figure out how to get the button aligned in directionContainer
         console.log("path set");
         break;
       case ("sw5se14"):
