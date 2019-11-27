@@ -82,7 +82,7 @@ db.collection('Users')
   .doc('YI7AbuNz30GooRtldHJZ')
   .collection('recents')
   .doc('recent1')
-  .onSnapshot(function(snap) {
+  .onSnapshot(function (snap) {
     console.log('this is working test...', snap.data());
     document.getElementById('recent1').innerHTML = snap.data().name; // another way is to go snap.data()['recent1']
     document.getElementById('recent2').innerHTML = snap.data().name;
@@ -100,6 +100,7 @@ function refresh() {
 
 // Event listener that will go to location
 document.getElementById('locationB').addEventListener('keyup', goLocation);
+
 function goLocation(e) {
   e.preventDefault();
   if (e.keyCode === 13) {
@@ -113,24 +114,30 @@ function goLocation(e) {
     // Testing switch case
     switch (location) {
       case ("sw5se12"):
-        // Was testing jquery style selector
-        $("#sw5se12").css("display","grid");
         // To show none the container without the image and place our own container with everything in it
-        $("#content").css("display","none");
-        $("#directionContainer").css("display","grid");
-        $('#account').css("margin","-7vh");
+        $("#content").css("display", "none");
+        $("#directionContainer").css("display", "grid");
+        $('#account').css("margin", "-7vh");
+        // Was testing jquery style selector
+        $("#sw5se12").css("display", "grid");
+        // Setting name of path
+        $("#pathName").html("SW5 - - -> SE12");
         console.log("path set");
         break;
       case ("sw5se14"):
+        $("#content").css("display", "none");
+        $("#directionContainer").css("display", "grid");
         // Dom style selector
-        $("#sw5se14").css("display","grid");
-        $("#content").css("display","none");
-        $("#directionContainer").css("display","grid");
+        $("#sw5se14").css("display", "grid");
+        // Setting name of path
+        $("#pathName").html("SW5 - - -> SE14");
         break;
       case ("se12se14"):
-          $("#se12se14").css("display","grid");
-          $("#content").css("display","none");
-          $("#directionContainer").css("display","grid");
+        $("#content").css("display", "none");
+        $("#directionContainer").css("display", "grid");
+        $("#se12se14").css("display", "grid");
+        // Setting name of path
+        $("#pathName").html("SE12 - - -> SE14");
         break;
       default:
         console.log("Incorrect value");
