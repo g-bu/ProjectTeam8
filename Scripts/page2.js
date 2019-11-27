@@ -117,7 +117,6 @@ function goLocation(e) {
         // To show none the container without the image and place our own container with everything in it
         $("#content").css("display", "none");
         $("#directionContainer").css("display", "grid");
-        $('#account').css("margin", "-7vh");
         // Was testing jquery style selector
         $("#sw5se12").css("display", "grid");
         // Setting name of path

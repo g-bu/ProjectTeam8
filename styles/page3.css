@@ -20,7 +20,6 @@ header{
     float: left;
 }
 #account{
-    margin-top: -7vh;
     font-size: 36px;
     float:right;
     color:#5FC5FA;
@@ -29,8 +28,10 @@ header{
 }
 #pathName{
     margin-top: 2vh;
-    font-size: 20pt;
+    font-size: 15pt;
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 /*---------------------------------------------
     CSS for the Account Page Modal
@@ -65,7 +66,7 @@ figure img {
 }
 footer {
     grid-column: 1/span 100;
-    grid-row:90/ span 10;
+    grid-row:70/ span 10;
     text-align: center;
 }
 #info {
