@@ -164,9 +164,9 @@ input {
 #directionContainer css for page showing directions and path
 ======================================================= */
 #directionContainer{
+    display:none;
     background-color: #4046A1;
     color:#5FC5FA;
-    display: grid;
     grid-template-columns: repeat(100, 1vw);
     grid-template-rows: repeat(100, 1vh);
 }
