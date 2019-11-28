@@ -71,7 +71,7 @@
           <input id="locationB" type="text" onclick="searchPage()" placeholder=" Location B " />
         </fieldset>
       </form>
-      <figure id="map">
+      <figure id="map" onclick="clearPage()">
         <img src="Images/Interactive.jpg" />
       </figure>
 
@@ -108,29 +108,5 @@
     <script src="Scripts/body.js"></script>
     <script src="Scripts/dummy.js"></script>
 
-    <script>
-      $('#sw5').click(function(event) {
-        console.log('s45 was clicked, yeah it worked');
-        $('#htmlForSW5').css('display', 'grid');
-      });
-    </script>
-    <script>
-      $('#htmlForSW5').hover(function(event) {
-        console.log('dbl click happened was clicked, yeah it worked');
-        $('#htmlForSW5').css('display', 'none');
-      });
-    </script>
-
-    <!--
-  <script>
-    firebase.auth().onAuthStateChanged(function (user) {
-      var userRef = db.collection('Users').doc(user.uid);
-
-      // add a date to the history sub-collection
-      userRef.collection("recents").doc("recent1").set({
-        'recent1': myFunction()
-      });
-    })
-  </script> -->
   </body>
 </html>
