@@ -1,112 +1,127 @@
 <html>
+  <head>
+    <title>Main Navigation Page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-<head>
-  <title>Main Navigation Page</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap for Mobile-first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap for Mobile-first -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- map icon-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-  <!-- map icon-->
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- firebase stuff -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-  <!-- firebase stuff -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script> -->
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script> -->
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="Scripts/dbConfig.js"> </script>
+    <script src="Scripts/dbConfig.js"></script>
+  </head>
 
-</head>
+  <body>
+    <div id="content">
+      <header>
+        <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+        <span id="home" onclick="refresh()" class="material-icons">home</span>
+        <!-- Account Button trigger modal -->
+        <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
+          account_box
+        </button>
 
-<body>
-  <div id="content">
-    <header>
-      <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
-      <span id="home" onclick="refresh()" class="material-icons">home</span>
-      <!-- Account Button trigger modal -->
-      <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
-        account_box
-      </button>
-
-      <!-- Modal for Account Button -->
-      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span id="account" class="material-icons">account_box</span>
-              <h5 class="modal-title" id="username"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div>View Account</div>
-              <div>Favorite Locations</div>
-              <div>Settings</div>
-              <div>Log Out</div>
+        <!-- Modal for Account Button -->
+        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span id="account" class="material-icons">account_box</span>
+                <h5 class="modal-title" id="username"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">**</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div>View Account</div>
+                <div>Favorite Locations</div>
+                <div>Settings</div>
+                <div>Log Out</div>
+              </div>
             </div>
           </div>
         </div>
+      </header>
+      <div id="reverse">
+        <span id="reverse" class="material-icons">import_export</span>
       </div>
-    </header>
-    <div id="reverse">
-      <span id="reverse" class="material-icons">import_export</span>
-    </div>
-    <form>
-      <fieldset>
-        <!-- Location A and B search boxes, onclick goes to page 2, oninput adds location B to recent locations -->
-        <input id="locationA" type="text" onclick="searchPage()" placeholder=" Location A" />
-        <input id="locationB" type="text" onclick="searchPage()" placeholder=" Location B " />
-      </fieldset>
-    </form>
-    <figure id="map">
-      <img src="Images/Interactive.jpg">
-    </figure>
-    <div id="sw5"><i class='fas fa-map-marker-alt'></i>
-    </div>
-    <div id="se12"><i class='fas fa-map-marker-alt'></i>
-    </div>
-    <div id="se14"><i class='fas fa-map-marker-alt'></i>
-    </div>
-    <footer id="footer">
-      <p id="information">information</p>
-    </footer>
-    <nav id="nav">
-      <img id="largeaccount">
-      <p> User</p>
-      <ul>
-        <li> View Account </li>
-        <li> Favorite Locations </li>
-        <li> Settings </li>
-      </ul>
-    </nav>
-  </div>
+      <form>
+        <fieldset>
+          <!-- Location A and B search boxes, onclick goes to page 2, oninput adds location B to recent locations -->
+          <input id="locationA" type="text" onclick="searchPage()" placeholder=" Location A" />
+          <input id="locationB" type="text" onclick="searchPage()" placeholder=" Location B " />
+        </fieldset>
+      </form>
+      <figure id="map">
+        <img src="Images/Interactive.jpg" />
+      </figure>
 
-  <!------------------------------------------------------------------------------->
-  <!-- Javascript goes here.  Create a new user in our firestore database first. -->
-  <!------------------------------------------------------------------------------->
-  <script src="Scripts/app.js"></script>
-  <script src="Scripts/page2.js"></script>
-  <script src="Scripts/create_user.js"></script>
-  <script src="Scripts/body.js"></script>
-  <script src="Scripts/dummy.js"></script>
+      <div id="sw5">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="htmlForSW5">
+          HOURS: 9 - 5 <br />
+          PHONE: 604-123-4567 <br />
+          AMMENITIES: microwave, washrooms
+        </span>
+      </div>
+      <div id="se12"><i class="fas fa-map-marker-alt"></i></div>
+      <div id="se14"><i class="fas fa-map-marker-alt"></i></div>
+      <footer id="footer">
+        <p id="information">information</p>
+      </footer>
+      <nav id="nav">
+        <img id="largeaccount" />
+        <p>User</p>
+        <ul>
+          <li>View Account</li>
+          <li>Favorite Locations</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </div>
 
-<!-- 
+    <!------------------------------------------------------------------------------->
+    <!-- Javascript goes here.  Create a new user in our firestore database first. -->
+    <!------------------------------------------------------------------------------->
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/page2.js"></script>
+    <script src="Scripts/create_user.js"></script>
+    <script src="Scripts/body.js"></script>
+    <script src="Scripts/dummy.js"></script>
+
+    <script>
+      $('#sw5').click(function(event) {
+        console.log('s45 was clicked, yeah it worked');
+        $('#htmlForSW5').css('display', 'grid');
+      });
+    </script>
+    <script>
+      $('#htmlForSW5').hover(function(event) {
+        console.log('dbl click happened was clicked, yeah it worked');
+        $('#htmlForSW5').css('display', 'none');
+      });
+    </script>
+
+    <!--
   <script>
     firebase.auth().onAuthStateChanged(function (user) {
       var userRef = db.collection('Users').doc(user.uid);
@@ -117,6 +132,5 @@
       });
     })
   </script> -->
-</body>
-
+  </body>
 </html>
