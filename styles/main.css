@@ -126,10 +126,36 @@ form {
 #htmlForSW5 {
   display: none;
   transform: translateY(-30vh);
-  margin-left: -20vw;
+  margin-left: 13px;
+  margin-top: -175px;
   font-size: 16pt;
   width: 60vw;
   height: 26vh;
-  background-color:#4046a1;
+  background-color: #4046a1;
+  text-align: center;
+}
+
+#htmlForSE12 {
+  display: none;
+  /* transform: translateY(-30vh); */
+  transform: translateX(-40vw);
+  margin-left: -10vw;
+  margin-top: -300px;
+  font-size: 16pt;
+  width: 60vw;
+  height: 29vh;
+  background-color: #4046a1;
+  text-align: center;
+}
+
+#htmlForSE14 {
+  display: none;
+  transform: translateX(-48vw);
+  margin-top: -427px;
+  margin-left: -20vw;
+  font-size: 16pt;
+  width: 60vw;
+  height: 29vh;
+  background-color: #4046a1;
   text-align: center;
 }
