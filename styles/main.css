@@ -125,11 +125,11 @@ form {
 
 #htmlForSW5 {
   display: none;
-  margin-left: -75px;
-
-  width: 100vw;
-  height: 50vh;
-  background-color: blue;
-  color: white;
+  transform: translateY(-30vh);
+  margin-left: -20vw;
+  font-size: 16pt;
+  width: 60vw;
+  height: 26vh;
+  background-color:#4046a1;
   text-align: center;
 }
