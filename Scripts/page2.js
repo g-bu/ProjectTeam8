@@ -29,7 +29,7 @@
 
 //         console.log(snapshot.data().name);
 //         snapshot.forEach(function (doc) {
-//           // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents');
+//           // var dbref = db.collection('Users').doc(user.uid).collection('recents');
 //           var dbRecent = doc.data().name;
 //           console.log("names of each recent: ", dbRecent);
 
