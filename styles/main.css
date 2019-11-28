@@ -1,47 +1,57 @@
-body, head {
+body,
+head {
     margin: 0;
     padding: 0;
 }
-#content{
-    color:#5FC5FA;
+
+#content {
+    color: #5FC5FA;
     display: grid;
-    grid-template-columns: repeat(100,1vw);
-    grid-template-rows: repeat(100,1vh);
-    background-color:black;
+    grid-template-columns: repeat(100, 1vw);
+    grid-template-rows: repeat(100, 1vh);
+    background-color: black;
 }
+
 h1 {
-    font-family:Baskerville;
+    font-family: Baskerville;
     text-align: center;
 }
-header{
+
+header {
     background-color: #4046A1;
     grid-column: 1/ span 100;
     grid-row: 1/span 18;
 }
-input{
+
+input {
     width: 65vw;
 }
-form{
+
+form {
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
 }
-#locationA{
+
+#locationA {
     margin-bottom: 12px;
 }
+
 #home {
     margin-top: 5vh;
     margin-left: 3vw;
-    font-size: 48px; 
+    font-size: 48px;
     float: left;
 }
-#account{
+
+#account {
     margin: 1vh 1vw 0vh 0vw;
     font-size: 36px;
-    float:right;
-    color:#5FC5FA;
+    float: right;
+    color: #5FC5FA;
     background-color: #4046A1;
     border: none;
 }
+
 /*---------------------------------------------
     CSS for the Account Page Modal
 ---------------------------------------------*/
@@ -49,29 +59,33 @@ form{
     width: 250px !important;
     height: 300px;
     float: right;
-    
-}
-.modal-content {
-    height: 150%;
-    
+
 }
 
-#reverse{
+.modal-content {
+    height: 150%;
+
+}
+
+#reverse {
     grid-column: 85/ span 5;
     grid-row: 8/ span 10;
     font-size: 48px;
     margin-right: 1vw;
 }
-input{
-    width:65vw;
+
+input {
+    width: 65vw;
 }
-form{
-        margin: 0;
+
+form {
+    margin: 0;
     padding: 0;
     grid-column: 20/ span 50;
     grid-row: 5/ span 10;
 }
-#map{
+
+#map {
     /* background-image: url(../Images/Interactive.jpg);
     background-repeat: no-repeat;
     background-size: contain; */
@@ -79,16 +93,19 @@ form{
     grid-column: 1/span 100;
     grid-row: 19/ span 81;
 }
+
 #sw5 {
     grid-column: 19/span 5;
     grid-row: 72/span 5;
     font-size: 24px;
 }
+
 #se12 {
     grid-column: 72/span 5;
     grid-row: 58/span 5;
     font-size: 24px;
 }
+
 #se14 {
     grid-column: 90/span 5;
     grid-row: 75/span 5;
@@ -99,9 +116,21 @@ form{
     height: 82vh;
     width: 100vw;
 }
+
 #nav {
-  display:none;
+    display: none;
 }
-#footer{
-  display:none;
+
+#footer {
+    display: none;
+}
+
+#htmlForSW5 {
+    display: none;
+    margin-left: -125px;
+    ;
+    width: 100vw;
+    height: 50vh;
+    background-color: blue;
+    color: white;
 }
