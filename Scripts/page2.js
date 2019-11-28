@@ -11,9 +11,7 @@
 //     var locA = document.getElementById('LocationA').value;
 //   }
 
-
 //   // Trying to place in search function
-
 
 //   // //only referring to the user:'YI7AbuNz30GooRtldHJZ' to change value in recents
 //   // var dbref = db.collection('Users').doc('YI7AbuNz30GooRtldHJZ').collection('recents').doc('recent1');
@@ -104,46 +102,45 @@ document.getElementById('locationB').addEventListener('keyup', goLocation);
 function goLocation(e) {
   e.preventDefault();
   if (e.keyCode === 13) {
-    console.log("enter key pressed");
-    // searchPage(); 
+    console.log('enter key pressed');
+    // searchPage();
     var locA = document.getElementById('locationA').value;
     var locB = document.getElementById('locationB').value;
-    console.log("locA = " + locA + " locB = " + locB);
-    var location = "" + locA + locB;
+    console.log('locA = ' + locA + ' locB = ' + locB);
+    var location = '' + locA + locB;
     // keeps saying sw5se12 is undefined
     // Testing switch case
     switch (location) {
-      case ("sw5se12"):
+      case 'sw5se12':
         // To show none the container without the image and place our own container with everything in it
-        $("#content").css("display", "none");
-        $("#directionContainer").css("display", "grid");
+        $('#content').css('display', 'none');
+        $('#directionContainer').css('display', 'grid');
         // Was testing jquery style selector
-        $("#sw5se12").css("display", "grid");
+        $('#sw5se12').css('display', 'grid');
         // Setting name of path
-        $("#pathName").html("SW5 - - -> SE12");
-        console.log("path set");
+        $('#pathName').html('SW5 - - -> SE12');
+        console.log('path set');
         break;
-      case ("sw5se14"):
-        $("#content").css("display", "none");
-        $("#directionContainer").css("display", "grid");
+      case 'sw5se14':
+        $('#content').css('display', 'none');
+        $('#directionContainer').css('display', 'grid');
         // Dom style selector
-        $("#sw5se14").css("display", "grid");
+        $('#sw5se14').css('display', 'grid');
         // Setting name of path
-        $("#pathName").html("SW5 - - -> SE14");
+        $('#pathName').html('SW5 - - -> SE14');
         break;
-      case ("se12se14"):
-        $("#content").css("display", "none");
-        $("#directionContainer").css("display", "grid");
-        $("#se12se14").css("display", "grid");
+      case 'se12se14':
+        $('#content').css('display', 'none');
+        $('#directionContainer').css('display', 'grid');
+        $('#se12se14').css('display', 'grid');
         // Setting name of path
-        $("#pathName").html("SE12 - - -> SE14");
+        $('#pathName').html('SE12 - - -> SE14');
         break;
       default:
-        console.log("Incorrect value");
+        console.log('Incorrect value');
         break;
     }
     // searchPage();
-
   }
 }
 // function searchPage() {

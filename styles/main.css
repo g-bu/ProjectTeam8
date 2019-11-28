@@ -1,107 +1,135 @@
-body, head {
-    margin: 0;
-    padding: 0;
+body,
+head {
+  margin: 0;
+  padding: 0;
 }
-#content{
-    color:#5FC5FA;
-    display: grid;
-    grid-template-columns: repeat(100,1vw);
-    grid-template-rows: repeat(100,1vh);
-    background-color:black;
+
+#content {
+  color: #5fc5fa;
+  display: grid;
+  grid-template-columns: repeat(100, 1vw);
+  grid-template-rows: repeat(100, 1vh);
+  background-color: black;
 }
+
 h1 {
-    font-family:Baskerville;
-    text-align: center;
+  font-family: Baskerville;
+  text-align: center;
 }
-header{
-    background-color: #4046A1;
-    grid-column: 1/ span 100;
-    grid-row: 1/span 18;
+
+header {
+  background-color: #4046a1;
+  grid-column: 1 / span 100;
+  grid-row: 1 / span 18;
 }
-input{
-    width: 65vw;
+
+input {
+  width: 65vw;
 }
-form{
-    grid-column: 20/ span 50;
-    grid-row: 5/ span 10;
+
+form {
+  grid-column: 20 / span 50;
+  grid-row: 5 / span 10;
 }
-#locationA{
-    margin-bottom: 12px;
+
+#locationA {
+  margin-bottom: 12px;
 }
+
 #home {
-    margin-top: 5vh;
-    margin-left: 3vw;
-    font-size: 48px; 
-    float: left;
+  margin-top: 5vh;
+  margin-left: 3vw;
+  font-size: 48px;
+  float: left;
 }
-#account{
-    margin: 1vh 1vw 0vh 0vw;
-    font-size: 36px;
-    float:right;
-    color:#5FC5FA;
-    background-color: #4046A1;
-    border: none;
+
+#account {
+  margin: 1vh 1vw 0vh 0vw;
+  font-size: 36px;
+  float: right;
+  color: #5fc5fa;
+  background-color: #4046a1;
+  border: none;
 }
+
 /*---------------------------------------------
     CSS for the Account Page Modal
 ---------------------------------------------*/
 .modal-dialog {
-    width: 250px !important;
-    height: 300px;
-    float: right;
-    
-}
-.modal-content {
-    height: 150%;
-    
+  width: 250px !important;
+  height: 300px;
+  float: right;
 }
 
-#reverse{
-    grid-column: 85/ span 5;
-    grid-row: 8/ span 10;
-    font-size: 48px;
-    margin-right: 1vw;
+.modal-content {
+  height: 150%;
 }
-input{
-    width:65vw;
+
+#reverse {
+  grid-column: 85 / span 5;
+  grid-row: 8 / span 10;
+  font-size: 48px;
+  margin-right: 1vw;
 }
-form{
-        margin: 0;
-    padding: 0;
-    grid-column: 20/ span 50;
-    grid-row: 5/ span 10;
+
+input {
+  width: 65vw;
 }
-#map{
-    /* background-image: url(../Images/Interactive.jpg);
+
+form {
+  margin: 0;
+  padding: 0;
+  grid-column: 20 / span 50;
+  grid-row: 5 / span 10;
+}
+
+#map {
+  /* background-image: url(../Images/Interactive.jpg);
     background-repeat: no-repeat;
     background-size: contain; */
-    /* background-position:fixed; */
-    grid-column: 1/span 100;
-    grid-row: 19/ span 81;
+  /* background-position:fixed; */
+  grid-column: 1 / span 100;
+  grid-row: 19 / span 81;
 }
+
 #sw5 {
-    grid-column: 19/span 5;
-    grid-row: 72/span 5;
-    font-size: 24px;
+  grid-column: 19 / span 5;
+  grid-row: 72 / span 5;
+  font-size: 24px;
 }
+
 #se12 {
-    grid-column: 72/span 5;
-    grid-row: 58/span 5;
-    font-size: 24px;
+  grid-column: 72 / span 5;
+  grid-row: 58 / span 5;
+  font-size: 24px;
 }
+
 #se14 {
-    grid-column: 90/span 5;
-    grid-row: 75/span 5;
-    font-size: 24px;
+  grid-column: 90 / span 5;
+  grid-row: 75 / span 5;
+  font-size: 24px;
 }
 
 #map img {
-    height: 82vh;
-    width: 100vw;
+  height: 82vh;
+  width: 100vw;
 }
+
 #nav {
-  display:none;
+  display: none;
 }
-#footer{
-  display:none;
+
+#footer {
+  display: none;
+}
+
+#htmlForSW5 {
+  display: none;
+  transform: translateY(-30vh);
+  margin-left: -20vw;
+  font-size: 16pt;
+  width: 60vw;
+  height: 26vh;
+  background-color:#4046a1;
+  text-align: center;
 }

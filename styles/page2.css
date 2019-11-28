@@ -164,33 +164,35 @@ input {
 #directionContainer css for page showing directions and path
 ======================================================= */
 #directionContainer{
+    display:none;
     background-color: #4046A1;
     color:#5FC5FA;
-    display: grid;
     grid-template-columns: repeat(100, 1vw);
     grid-template-rows: repeat(100, 1vh);
 }
 
-#directionContainer header{
+#directionContainer header {
     background-color: #4046A1;
     grid-column: 1/ span 100;
     grid-row: 1/span 10;
 }
 
-#account2{
+#account2 {
     /* margin-top: -7vh; */
     font-size: 36px;
-    float:right;
-    color:#5FC5FA;
+    float: right;
+    color: #5FC5FA;
     background-color: #4046A1;
     border: none;
 }
- #home {
+
+#home {
     margin-top: 1vh;
     margin-left: 3vw;
-    font-size: 40px; 
+    font-size: 40px;
     float: left;
 }
+
 /* TESTING FIGURE */
 figure {
     grid-column: 1/span 100;
@@ -218,11 +220,13 @@ figure img {
 .paths {
     display: none;
 }
+
 footer {
     grid-column: 1/span 100;
     grid-row: 90/ span 10;
     text-align: center;
 }
+
 #info {
     margin-top: 1vh;
     font-size: 36px;
