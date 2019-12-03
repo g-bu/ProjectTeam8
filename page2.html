@@ -31,24 +31,31 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <!--  Content for standard page 2.-->
   <div id="content">
     <header>
       <!--      Home button, refresh function returns user to main page-->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
+=======
+<!--  Account button -->
+  <div id="cornerAccount">
+>>>>>>> 8a8abb42c939851ca28e9e774066ecced7a0815d
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
       </button>
-      <!-- <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  </div>
+  <!--       Modal for Account Button -->
+      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <span id="account2" class="material-icons">account_box</span>
+              <span id="account" class="material-icons">account_box</span>
               <h5 class="modal-title" id="username"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
+                <span aria-hidden="true">x</span>
               </button>
             </div>
             <div class="modal-body">
@@ -58,7 +65,13 @@
               <div>Log Out</div>
             </div>
           </div>
-        </div> -->
+        </div>
+      </div>
+  <!--  Content for standard page 2.-->
+  <div id="content">
+    <header>
+<!--      Home button, refresh function returns user to main page-->
+      <span id="home" onclick="refresh()" class="material-icons">home</span>
     </header>
     <div id="reverse">
       <span id="reverse" class="material-icons">import_export</span>
@@ -104,43 +117,20 @@
       <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Text for the path -->
       <p id="pathName"></p>
-      <!-- Account Button trigger modal -->
-      <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
-        account_box
-      </button>
-      <!-- Modal for Account Button -->
-      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span id="account2" class="material-icons">account_box</span>
-              <h5 class="modal-title" id="username"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div>View Account</div>
-              <div>Favorite Locations</div>
-              <div>Settings</div>
-              <div>Log Out</div>
-            </div>
-          </div>
-        </div>
+
     </header>
     <figure>
-      <!-- Images for the paths to be put into a loop  -->
+<!--       Images for the paths to be put into a loop  -->
       <img class="paths" id="sw5se12" alt="path1" src="Images/sw5se12.JPG">
       <img class="paths" id="sw5se14" alt="path2" src="Images/sw5se14.JPG">
       <img class="paths" id="se12se14" alt="path3" src="Images/se12se14.JPG">
     </figure>
     <footer>
-      <!-- Icon for info to pop out if clicked -->
+<!--       Icon for info to pop out if clicked -->
       <span id="info" class="material-icons" onclick="showInfo()">menu</span>
     </footer>
   </div>
-  <!-- Linking to our own script-->
+<!--   Linking to our own script-->
   <script src="Scripts/dbConfig.js"> </script>
   <script src="Scripts/page2.js"></script>
   <script src="Scripts/body.js"></script>
