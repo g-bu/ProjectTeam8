@@ -30,15 +30,44 @@
 </head>
 
 <body>
-<!--  Content for standard page 2.-->
+<!--  Account button -->
+  <div id="cornerAccount">
+      <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
+        account_box
+      </button>
+  </div>
+  <!--       Modal for Account Button -->
+      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span id="account" class="material-icons">account_box</span>
+              <h5 class="modal-title" id="username"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">x</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>View Account</div>
+              <div>Favorite Locations</div>
+              <div>Settings</div>
+              <div>Log Out</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!--  Content for standard page 2.-->
   <div id="content">
     <header>
 <!--      Home button, refresh function returns user to main page-->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
-      <!-- Account Button trigger modal -->
+<!--
+       Account Button trigger modal 
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
       </button>
+-->
     </header>
     <div id="reverse">
       <span id="reverse" class="material-icons">import_export</span>
@@ -85,10 +114,11 @@
       <!-- Text for the path -->
       <p id="pathName"></p>
       <!-- Account Button trigger modal -->
+<!--
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
       </button>
-      <!-- Modal for Account Button -->
+       Modal for Account Button 
       <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -108,6 +138,8 @@
             </div>
           </div>
         </div>
+      </div>
+-->
       </header>
       <figure>
         <!-- Images for the paths to be put into a loop  -->

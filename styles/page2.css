@@ -148,18 +148,18 @@ input {
 /* =======================================
     CSS for the Account Page Modal
 ========================================== */
+#cornerAccount{
+  position: absolute;
+  transform: translateX(90vw);
+}
 .modal-dialog {
-    width: 250px !important;
-    height: 300px;
-    float: right;
-
+  width: 250px !important;
+  height: 300px;
+  float: right;
 }
-
 .modal-content {
-    height: 150%;
-
+  height: 150%;
 }
-
 /* =====================================================
 #directionContainer css for page showing directions and path
 ======================================================= */
@@ -176,8 +176,7 @@ input {
     grid-column: 1/ span 100;
     grid-row: 1/span 10;
 }
-
-#account2 {
+#account {
     /* margin-top: -7vh; */
     font-size: 36px;
     float: right;
