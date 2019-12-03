@@ -9,11 +9,14 @@
 //   messagingSenderId: '580475693421',
 //   appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
 // };
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore();
+// Initialize Firebase
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 // Initialize the FirebaseUI Widget using Firebase. ( A new UI object)
+
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
+ui.start('#firebaseui-auth-container', uiConfig);
 
 // Configuration for object
 
@@ -54,4 +57,4 @@ var uiConfig = {
 // The start method will wait until the DOM is loaded.
 // says to launch the ui at firebase container (line 20) , using uiConfig
 
-ui.start('#firebaseui-auth-container', uiConfig);
+// ui.start('#firebaseui-auth-container', uiConfig);
