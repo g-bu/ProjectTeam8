@@ -48,6 +48,7 @@ input {
 
 #account {
     margin-top: 1vh;
+    transform:translateX(-3vw);
     font-size: 36px;
     float: right;
     color: #5FC5FA;
@@ -148,10 +149,6 @@ input {
 /* =======================================
     CSS for the Account Page Modal
 ========================================== */
-#cornerAccount{
-  position: absolute;
-  transform: translateX(90vw);
-}
 .modal-dialog {
   width: 250px !important;
   height: 300px;
@@ -176,15 +173,6 @@ input {
     grid-column: 1/ span 100;
     grid-row: 1/span 10;
 }
-#account {
-    /* margin-top: -7vh; */
-    font-size: 36px;
-    float: right;
-    color: #5FC5FA;
-    background-color: #4046A1;
-    border: none;
-}
-
 #home {
     margin-top: 1vh;
     margin-left: 3vw;
