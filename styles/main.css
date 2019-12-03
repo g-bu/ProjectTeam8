@@ -125,11 +125,11 @@ form {
 
 #htmlForSW5 {
   display: none;
-  transform: translateY(-30vh);
-  margin-left: 13px;
-  margin-top: -175px;
+  margin-left: -88px;
+  margin-top: 20px;
+  position: absolute;
   font-size: 16pt;
-  width: 60vw;
+  width: 100vw;
   height: 26vh;
   background-color: #4046a1;
   text-align: center;
@@ -137,12 +137,11 @@ form {
 
 #htmlForSE12 {
   display: none;
-  /* transform: translateY(-30vh); */
-  transform: translateX(-40vw);
-  margin-left: -10vw;
-  margin-top: -300px;
+  margin-left: -348px;
+  margin-top: 126px;
+  position: absolute;
   font-size: 16pt;
-  width: 60vw;
+  width: 100vw;
   height: 29vh;
   background-color: #4046a1;
   text-align: center;
@@ -150,11 +149,11 @@ form {
 
 #htmlForSE14 {
   display: none;
-  transform: translateX(-48vw);
-  margin-top: -427px;
-  margin-left: -20vw;
+  position: absolute;
+  margin-left: -437px;
+  margin-top: -55px;
   font-size: 16pt;
-  width: 60vw;
+  width: 100vw;
   height: 29vh;
   background-color: #4046a1;
   text-align: center;
