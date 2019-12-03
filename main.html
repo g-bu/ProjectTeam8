@@ -34,14 +34,14 @@
 <body>
   <div id="content">
     <header>
-      <!-- Link for icons: https://material.io/resources/icons/?icon=import_export&style=baseline -->
+<!--       Home button that calls refresh function, to refresh this main page-->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
         account_box
       </button>
 
-      <!-- Modal for Account Button -->
+      <!-- Modal for Account Button Menu and options -->
       <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -63,20 +63,22 @@
         </div>
       </div>
     </header>
+<!--    Button that should reverse text fields -->
     <div id="reverse">
       <span id="reverse" class="material-icons">import_export</span>
     </div>
     <form>
       <fieldset>
-        <!-- Location A and B search boxes, onclick goes to page 2, oninput adds location B to recent locations -->
+        <!-- Location A and B search boxes, onlick uses searchPage function, which takes user to page 2 -->
         <input id="locationA" type="text" onclick="searchPage()" placeholder=" Location A" />
         <input id="locationB" type="text" onclick="searchPage()" placeholder=" Location B " />
       </fieldset>
     </form>
+<!--    The interactive map, uses function clearPage that clears information pop-ups if user has clicked a placemarker-->
     <figure id="map" onclick="clearPage()">
       <img src="Images/Interactive.jpg" />
     </figure>
-
+    
     <div id="sw5">
       <i class="fas fa-map-marker-alt"></i>
       <span id="htmlForSW5">
@@ -95,18 +97,6 @@
         PHONE: 604-434-4567 <br />
         AMMENITIES: microwave, washrooms
       </span></div>
-    <footer id="footer">
-      <p id="information">information</p>
-    </footer>
-    <nav id="nav">
-      <img id="largeaccount" />
-      <p>User</p>
-      <ul>
-        <li>View Account</li>
-        <li>Favorite Locations</li>
-        <li>Settings</li>
-      </ul>
-    </nav>
   </div>
 
   <!------------------------------------------------------------------------------->
