@@ -11,8 +11,8 @@
 // };
 // Initialize Firebase
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+// firebase.initializeApp(firebaseConfig);
+// const db = firebase.firestore();
 // Initialize the FirebaseUI Widget using Firebase. ( A new UI object)
 
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -57,4 +57,4 @@ var uiConfig = {
 // The start method will wait until the DOM is loaded.
 // says to launch the ui at firebase container (line 20) , using uiConfig
 
-// ui.start('#firebaseui-auth-container', uiConfig);
+ui.start('#firebaseui-auth-container', uiConfig);
