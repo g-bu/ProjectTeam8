@@ -9,7 +9,7 @@
 // };
 // // Initialize Firebase
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 function createUser() {
   firebase.auth().onAuthStateChanged(function(user) {
