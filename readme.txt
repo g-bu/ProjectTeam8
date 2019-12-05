@@ -25,7 +25,6 @@ images:
         
         
 scripts:
-        app:        
         authbody:   logs you in and confirms email, takes you to the main page.
         create_user: creates a user with name and email. Logs the user in and stores their info in firebase.
         dbConfig:   The API key for firebase to work.
