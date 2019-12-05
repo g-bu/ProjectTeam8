@@ -34,7 +34,7 @@
 <body>
   <div id="content">
     <header>
-<!--       Home button that calls refresh function, to refresh this main page-->
+      <!--       Home button that calls refresh function, to refresh this main page-->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Account Button trigger modal -->
       <button type="button" id="account" class="material-icons" data-toggle="modal" data-target="#exampleModal">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </header>
-<!--    Button that should reverse text fields -->
+    <!--    Button that should reverse text fields -->
     <div id="reverse">
       <span id="reverse" class="material-icons">import_export</span>
     </div>
@@ -73,11 +73,11 @@
         <input id="locationB" type="text" onclick="searchPage()" placeholder=" Location B " />
       </fieldset>
     </form>
-<!--    The interactive map, uses function clearPage that clears information pop-ups if user has clicked a placemarker-->
+    <!--    The interactive map, uses function clearPage that clears information pop-ups if user has clicked a placemarker-->
     <figure id="map" onclick="clearPage()">
       <img src="Images/Interactive.jpg" />
     </figure>
-    
+
     <div id="sw5">
       <i class="fas fa-map-marker-alt"></i>
       <span id="htmlForSW5">
@@ -100,11 +100,16 @@
 
   <!------------------------------------------------------------------------------->
   <!-- Javascript goes here.  Create a new user in our firestore database first. -->
+
   <!------------------------------------------------------------------------------->
+  <script src="Scripts/create_user.js"></script>
+  <script>
+    createUser();
+    showName();
+  </script>
+
   <script src="Scripts/app.js"></script>
   <script src="Scripts/page2.js"></script>
-  <script src="Scripts/create_user.js"></script>
-  <script src="Scripts/body.js"></script>
   <script src="Scripts/dummy.js"></script>
 
 </body>

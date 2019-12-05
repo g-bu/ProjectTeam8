@@ -1,18 +1,32 @@
-// Function that creates a new document in the users collection
+// var firebaseConfig = {
+//   apiKey: 'AIzaSyDg-FN6Xg9nEtOtSFVN4ED-TlxL85kcmzc',
+//   authDomain: 'class-shortcut-tool.firebaseapp.com',
+//   databaseURL: 'https://class-shortcut-tool.firebaseio.com',
+//   projectId: 'class-shortcut-tool',
+//   storageBucket: 'class-shortcut-tool.appspot.com',
+//   messagingSenderId: '580475693421',
+//   appId: '1:580475693421:web:633c3316a68bbfbc1dd264'
+// };
+// // Initialize Firebase
+
+// firebase.initializeApp(firebaseConfig);
+
 function createUser() {
-  // if the current user logged in user
-  // is authenticated, then grab "uid" "displayName" and "email"
-  // use "set()" with merge (if document did not exist it will be created)
-  firebase.auth().onAuthStateChanged(function(Users) {
-    db.collection('Users')
-      .doc(Users.uid)
+  firebase.auth().onAuthStateChanged(function(user) {
+    db.collection('users')
+      .doc(user.uid)
       .set(
         {
-          "name": Users.displayName,
-          "email": Users.email
+          name: user.displayName,
+          email: user.email
         },
         { merge: true }
       );
   });
-  }
-  
+}
+function showName() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    console.log(user.uid);
+    document.getElementById('name').innerHTML = user.displayName;
+  });
+}
