@@ -24,7 +24,7 @@ header {
 }
 
 input {
-  width: 65vw;
+  width: 61vw;
 }
 
 form {
@@ -65,15 +65,16 @@ form {
   height: 150%;
 }
 
-#reverse {
-  grid-column: 85 / span 5;
-  grid-row: 8 / span 10;
-  font-size: 48px;
-  margin-right: 1vw;
+.modal-body {
+  color: #5FC5FA;
+  line-height: 6vh;
 }
 
-input {
-  width: 65vw;
+#reverse {
+  grid-column: 81 / span 5;
+  grid-row: 8 / span 10;
+  font-size: 40px;
+  margin-right: 1vw;
 }
 
 form {
@@ -84,10 +85,6 @@ form {
 }
 
 #map {
-  /* background-image: url(../Images/Interactive.jpg);
-    background-repeat: no-repeat;
-    background-size: contain; */
-  /* background-position:fixed; */
   grid-column: 1 / span 100;
   grid-row: 19 / span 81;
 }
@@ -96,18 +93,21 @@ form {
   grid-column: 19 / span 5;
   grid-row: 72 / span 5;
   font-size: 24px;
+  text-shadow:3px 2px #4046a1;
 }
 
 #se12 {
   grid-column: 72 / span 5;
   grid-row: 58 / span 5;
   font-size: 24px;
+  text-shadow:3px 2px #4046a1;
 }
 
 #se14 {
   grid-column: 90 / span 5;
   grid-row: 75 / span 5;
   font-size: 24px;
+  text-shadow:3px 2px #4046a1;
 }
 
 #map img {
@@ -125,37 +125,56 @@ form {
 
 #htmlForSW5 {
   display: none;
-  margin-left: -88px;
-  margin-top: 20px;
   position: absolute;
-  font-size: 16pt;
+  margin-left: -18vw;
+  margin-top: -4vh;
+  padding: 1vh 1vw 1vw 1vh;
+  font-size: 14pt;
   width: 100vw;
-  height: 26vh;
+  height: 30vh;
   background-color: #4046a1;
-  text-align: center;
+  color: #5FC5FA;
+}
+#htmlForSW5 td {
+  text-align: left;
+  padding-right: 5px;
+  border-bottom: 1px white dotted;
 }
 
 #htmlForSE12 {
   display: none;
-  margin-left: -348px;
-  margin-top: 126px;
   position: absolute;
-  font-size: 16pt;
+  margin-left: -71vw;
+  margin-top: 10vh;
+  padding: 1vh 1vw 1vw 1vh;
+  font-size: 14pt;
   width: 100vw;
-  height: 29vh;
+  height: 30vh;
   background-color: #4046a1;
-  text-align: center;
+  color: #5FC5FA;
+}
+
+#htmlForSE12 td {
+  text-align: left;
+  padding-right: 5px;
+  border-bottom: 1px white dotted;
 }
 
 #htmlForSE14 {
   display: none;
   position: absolute;
-  margin-left: -437px;
-  margin-top: -55px;
-  font-size: 16pt;
+  margin-left: -89vw;
+  margin-top: -7vh;
+  padding: 1vh 1vw 1vw 1vh;
+  font-size: 14pt;
   width: 100vw;
-  height: 29vh;
+  height: 30vh;
   background-color: #4046a1;
-  text-align: center;
+  color: #5FC5FA;
+}
 
+#htmlForSE14 td {
+  text-align: left;
+  padding-right: 5px;
+  border-bottom: 1px white dotted;
 }

@@ -11,12 +11,18 @@ function searchPage() {
 }
 $('#sw5').click(function(event) {
   $('#htmlForSW5').css('display', 'grid');
+  $('#htmlForSE12').css('display', 'none');
+  $('#htmlForSE14').css('display', 'none');
 });
 $('#se12').click(function(event) {
   $('#htmlForSE12').css('display', 'grid');
+  $('#htmlForSW5').css('display', 'none');
+  $('#htmlForSE14').css('display', 'none');
 });
 $('#se14').click(function(event) {
   $('#htmlForSE14').css('display', 'grid');
+  $('#htmlForSW5').css('display', 'none');
+  $('#htmlForSE12').css('display', 'none');
 });
 
 function clearPage() {

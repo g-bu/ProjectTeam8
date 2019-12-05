@@ -32,7 +32,7 @@ form {
 }
 
 input {
-    width: 65vw;
+    width: 61vw;
 }
 
 #locationA {
@@ -48,23 +48,27 @@ input {
 
 #account {
     margin-top: 1vh;
-    transform:translateX(-3vw);
+    margin-left: 86vw;
     font-size: 36px;
-    float: right;
+    position: absolute;
+    color: #5FC5FA;
+    background-color: #4046A1;
+    border: none;
+}
+
+#account2 {
+    margin-top: 1vh;
+    font-size: 36px;
     color: #5FC5FA;
     background-color: #4046A1;
     border: none;
 }
 
 #reverse {
-    grid-column: 85/ span 5;
+    grid-column: 81/ span 5;
     grid-row: 7/ span 10;
-    font-size: 48px;
+    font-size: 40px;
     margin-right: 1vw;
-}
-
-#locationA {
-    margin-bottom: 12px;
 }
 
 #nav {
@@ -150,20 +154,27 @@ input {
     CSS for the Account Page Modal
 ========================================== */
 .modal-dialog {
-  width: 250px !important;
-  height: 300px;
-  float: right;
+    width: 250px !important;
+    height: 300px;
+    float: right;
 }
+
 .modal-content {
-  height: 150%;
+    height: 150%;
 }
+
+.modal-body {
+    color: #5FC5FA;
+    line-height: 6vh;
+}
+
 /* =====================================================
 #directionContainer css for page showing directions and path
 ======================================================= */
-#directionContainer{
-    display:none;
+#directionContainer {
+    display: none;
     background-color: #4046A1;
-    color:#5FC5FA;
+    color: #5FC5FA;
     grid-template-columns: repeat(100, 1vw);
     grid-template-rows: repeat(100, 1vh);
 }
@@ -173,6 +184,7 @@ input {
     grid-column: 1/ span 100;
     grid-row: 1/span 10;
 }
+
 #home {
     margin-top: 1vh;
     margin-left: 3vw;
