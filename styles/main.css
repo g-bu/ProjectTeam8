@@ -93,21 +93,21 @@ form {
   grid-column: 19 / span 5;
   grid-row: 72 / span 5;
   font-size: 24px;
-  text-shadow:3px 2px #4046a1;
+  text-shadow: 3px 2px #4046a1;
 }
 
 #se12 {
   grid-column: 72 / span 5;
   grid-row: 58 / span 5;
   font-size: 24px;
-  text-shadow:3px 2px #4046a1;
+  text-shadow: 3px 2px #4046a1;
 }
 
 #se14 {
   grid-column: 90 / span 5;
   grid-row: 75 / span 5;
   font-size: 24px;
-  text-shadow:3px 2px #4046a1;
+  text-shadow: 3px 2px #4046a1;
 }
 
 #map img {
@@ -127,7 +127,7 @@ form {
   display: none;
   position: absolute;
   margin-left: -18vw;
-  margin-top: -4vh;
+  margin-top: -5vh;
   padding: 1vh 1vw 1vw 1vh;
   font-size: 14pt;
   width: 100vw;
@@ -135,9 +135,24 @@ form {
   background-color: #4046a1;
   color: #5FC5FA;
 }
+
+#htmlForSW5 th {
+  padding-left: 4vw;
+  text-align: left;
+  font-size: 6vw;
+  border-bottom: 1px white dotted;
+}
+
 #htmlForSW5 td {
   text-align: left;
   padding-right: 5px;
+  border-bottom: 1px white dotted;
+}
+
+#htmlForSE12 th {
+  padding-left: 4vw;
+  text-align: left;
+  font-size: 6vw;
   border-bottom: 1px white dotted;
 }
 
@@ -145,13 +160,20 @@ form {
   display: none;
   position: absolute;
   margin-left: -71vw;
-  margin-top: 10vh;
+  margin-top: 9vh;
   padding: 1vh 1vw 1vw 1vh;
   font-size: 14pt;
   width: 100vw;
   height: 30vh;
   background-color: #4046a1;
   color: #5FC5FA;
+}
+
+#htmlForSE14 th {
+  padding-left: 4vw;
+  text-align: left;
+  font-size: 6vw;
+  border-bottom: 1px white dotted;
 }
 
 #htmlForSE12 td {
@@ -164,7 +186,7 @@ form {
   display: none;
   position: absolute;
   margin-left: -89vw;
-  margin-top: -7vh;
+  margin-top: -8vh;
   padding: 1vh 1vw 1vw 1vh;
   font-size: 14pt;
   width: 100vw;
