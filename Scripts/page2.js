@@ -30,24 +30,20 @@ function addRecent(e) {
       });
   }
   // ==================================================
-  // Reads User's Recent Locations from database and
-  //      inputs values into the containers for each
+  //  Reads User's 3 most recent of Recent Locations from database 
+  //  and inputs values into the containers for each
   // ==================================================
   var recentRef = db.collection("Users").doc("YI7AbuNz30GooRtldHJZ").collection("recents").orderBy("time", "desc").limit(3);
   recentRef.get().then(function (querySnapshot) {
     var recentArray = [];
     querySnapshot.forEach(function (doc) {
       recentArray.push(doc.data().locB);
-      // console.log(doc.id, "=>", doc.data().locB);
-      console.log(recentArray);
-      document.getElementById('recent1').innerHTML = recentArray[0];
-      document.getElementById('recent2').innerHTML = recentArray[1];
-      document.getElementById('recent3').innerHTML = recentArray[2];
     })
+    console.log(recentArray);
+    document.getElementById('recent1').innerHTML = recentArray[0];
+    document.getElementById('recent2').innerHTML = recentArray[1];
+    document.getElementById('recent3').innerHTML = recentArray[2];
   });
-
-
-
 
   // ============================================================
   //  Function for home button to return to main page
