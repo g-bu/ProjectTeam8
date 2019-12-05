@@ -9,15 +9,13 @@ function addRecent(e) {
   if (e.keyCode === 13) {
     console.log("Added locB to recents");
     e.preventDefault();
-
+    var user = firebase.auth().currentUser;
     var locB = document.getElementById('locationB').value;
     console.log(locB);
     const timestamp = firebase.firestore.FieldValue.serverTimestamp();
 
 
-    var recentCollection = db.collection("Users")
-      .doc("YI7AbuNz30GooRtldHJZ")
-      .collection("recents");
+    var recentCollection = db.collection('users').doc(user.uid).collection('recents');
     recentCollection.add({
         locB,
         time: timestamp
@@ -33,7 +31,8 @@ function addRecent(e) {
   //  Reads User's 3 most recent of Recent Locations from database 
   //  and inputs values into the containers for each
   // ==================================================
-  var recentRef = db.collection("Users").doc("YI7AbuNz30GooRtldHJZ").collection("recents").orderBy("time", "desc").limit(3);
+  var user = firebase.auth().currentUser;
+  var recentRef = db.collection("users").doc(user.uid).collection("recents").orderBy("time", "desc").limit(3);
   recentRef.get().then(function (querySnapshot) {
     var recentArray = [];
     querySnapshot.forEach(function (doc) {
