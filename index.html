@@ -2,8 +2,10 @@
 <html>
 
 <head>
-  <meta charset="Utf-8" />
   <title>Class Shortcut Tools</title>
+  <meta charset="utf-8" />
+
+  <!-- Double linking to own stylesheet due to the firebase deployment changing it. -->
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
   <link rel="stylesheet" type="text/css" href="Styles/index.css" />
   
@@ -26,11 +28,11 @@
 
 <body>
   <!--  Div for containing logo and firebase login ui-->
-
   <div id="container">
     <div id="logo"> <img alt="logo" src="Images/logo.png"></div>
     <div id="firebaseui-auth-container"></div>
   </div>
+  
   <!-- Linking our own scripts -->
 
   <!-- this contains the api key and firebase object creation and db reference -->
@@ -38,7 +40,6 @@
 
   <!--- this code is the login widget -->
   <script src="Scripts/authbody.js"></script>
-
 
 </body>
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Recent Locations</title>
+  <title>Navigation Input Page</title>
   <meta charset="utf-8" />
 
   <!-- Double linking to own stylesheet due to the firebase deployment changing it. -->
@@ -39,7 +39,8 @@
       account_box
     </button>
   </div>
-  <!--       Modal for Account Button -->
+
+  <!--Modal for Account Button -->
   <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -60,10 +61,13 @@
       </div>
     </div>
   </div>
-  <!--  Content for standard page 2.-->
+  
+  <!-- ---------------------------- -->
+  <!-- Content for standard page 2. -->
+  <!-- ---------------------------- -->
   <div id="content">
     <header>
-      <!--      Home button, refresh function returns user to main page-->
+      <!-- Home button, refresh function returns user to main page -->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
     </header>
     <div id="reverse">
@@ -84,17 +88,20 @@
         <span id="clock" class="material-icons">restore</span>
         <h1 id="recentTitle">Recent Locations</h1>
       </div>
+
       <!-- Containers for each Recent Locations -->
       <div class="innerLocations" id="recent1"></div>
       <div class="innerLocations" id="recent2"></div>
       <div class="innerLocations" id="recent3"></div>
     </section>
+
     <!-- Containers for Favorite Locations -->
     <section id="favoriteSection">
       <div id="favorite">
         <span id="star" class="material-icons">star</span>
         <h1 id="favoriteTitle">Favorites</h1>
       </div>
+
       <!-- Containers for each Favorite Locations -->
       <div class="innerLocations">SW5</div>
       <div class="innerLocations"></div>
@@ -107,23 +114,26 @@
   <!-- ------------------------------------------ -->
   <div id="directionContainer">
     <header>
+      <!-- Home button, refresh function returns user to main page -->
       <span id="home" onclick="refresh()" class="material-icons">home</span>
       <!-- Text for the path -->
       <p id="pathName"></p>
-
     </header>
+
+    <!-- Images for the paths to be put into a loop -->
     <figure>
-      <!--       Images for the paths to be put into a loop  -->
       <img class="paths" id="sw5se12" alt="path1" src="Images/sw5se12.JPG">
       <img class="paths" id="sw5se14" alt="path2" src="Images/sw5se14.JPG">
       <img class="paths" id="se12se14" alt="path3" src="Images/se12se14.JPG">
     </figure>
+
+    <!-- Footer with icon to pop up navigation info when clicked -->
     <footer>
-      <!--       Icon for info to pop out if clicked -->
+      <!-- showInfo function for future implementation -->
       <span id="info" class="material-icons" onclick="showInfo()">menu</span>
     </footer>
   </div>
-  
+
   <!-- this contains the api key and firebase object creation and db reference -->
   <script src="Scripts/dbConfig.js"></script>
 
@@ -131,8 +141,6 @@
   <script src="Scripts/authbody.js"></script>
   <script src="Scripts/page2.js"></script>
   <script src="Scripts/dummy.js"></script>
-
-
 
 </body>
 

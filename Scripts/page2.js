@@ -1,8 +1,7 @@
-// =====================================================================
+// ====================================================================================
 //  Gets value inputted into #locationB and write to stated user's recent locations
 //  in divs with id: recent1, recent2, and recent3.
-// =====================================================================
-
+// ====================================================================================
 document.getElementById('locationB').addEventListener('keyup', addRecent);
 
 function addRecent(e) {
@@ -27,10 +26,11 @@ function addRecent(e) {
         console.error("Error writing document: ", error);
       });
   }
-  // ==================================================
+
+  // ==================================================================
   //  Reads User's 3 most recent of Recent Locations from database 
   //  and inputs values into the containers for each
-  // ==================================================
+  // ==================================================================
   var user = firebase.auth().currentUser;
   var recentRef = db.collection("users").doc(user.uid).collection("recents").orderBy("time", "desc").limit(3);
   recentRef.get().then(function (querySnapshot) {
@@ -44,10 +44,10 @@ function addRecent(e) {
     document.getElementById('recent3').innerHTML = recentArray[2];
   });
 
-  // ============================================================
+  // =========================================================================
   //  Function for home button to return to main page
   //  Returns user to main page, called during onClick of the home button
-  // ============================================================
+  // =========================================================================
   function refresh() {
     var main = 'main.html';
     if ((location = 'main.html')) {
@@ -55,8 +55,10 @@ function addRecent(e) {
     }
     window.location = main;
   }
-
+  
+  //=====================================================================================================
   // Event listener that will take value of location when enter is pressed, and show correlating map
+  //=====================================================================================================
   document.getElementById('locationB').addEventListener('keyup', goLocation);
 
   // Function to take in event listener
@@ -68,10 +70,12 @@ function addRecent(e) {
       // Gets value of location A and B from search boxes
       var locA = document.getElementById('locationA').value;
       var locB = document.getElementById('locationB').value;
+
       // Joins locations together, to form a the searchable path, setting to lowercase to properly check any possible user casing
       var location = '' + locA + locB;
       location = location.toLowerCase();
       console.log(location);
+
       // Switch case, which according to user's inputted path, will display path direction container with corresponding path image
       switch (location) {
         case 'sw5se12':
@@ -98,7 +102,7 @@ function addRecent(e) {
           // Setting name of path
           $('#pathName').html('SE12 - - -> SE14');
           break;
-          // Default that will deal with cases if user tries to input path that is not supported
+        // Default that will deal with cases if user tries to input path that is not supported
         default:
           alert("Location not supported. Please try SW5 to SE12, SW5 to SE14, or SE12 to SE14");
           console.log('Incorrect value');

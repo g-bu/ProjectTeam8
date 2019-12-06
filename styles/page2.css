@@ -1,5 +1,5 @@
 /* =====================================================
-#content css for page with recent and favorite locations
+#content css for navigation input page with recent and favorite locations
 ======================================================= */
 body,
 head {
@@ -14,7 +14,9 @@ head {
     grid-template-columns: repeat(100, 1vw);
     grid-template-rows: repeat(100, 1vh);
 }
-
+/* ========================
+        Header Styling
+===========================*/
 h1 {
     font-family: Baskerville;
     text-align: center;
@@ -46,6 +48,9 @@ input {
     float: left;
 }
 
+/* ====================
+    Icons in Header 
+=======================*/
 #account {
     margin-top: 1vh;
     margin-left: 86vw;
@@ -75,9 +80,9 @@ input {
     display: none;
 }
 
-/* --------------------------------
-    Section for Recent and Favorites
---------------------------------------*/
+/* ---------------------------------------------
+    Overall sections for Recent and Favorites
+------------------------------------------------*/
 #recentSection {
     border-top: solid 1px black;
     grid-column: 1/ span 100;
@@ -91,9 +96,9 @@ input {
     background-color: #4046A1;
 }
 
-/* --------------------------------
+/* ---------------------
     Recent Locations
---------------------------------------*/
+------------------------*/
 #recent {
     margin-top: 2%;
     display: block;
@@ -112,19 +117,17 @@ input {
     padding-left: 10%;
     margin-bottom: 0%;
     text-align: left;
-
 }
 
-/* --------------------------------
+/* ----------------------
     Favorite Locations
---------------------------------------*/
+-------------------------*/
 #favorite {
     margin-top: 2%;
     display: block;
     border-bottom: solid #5fc5fa;
     margin-left: 5%;
     margin-right: 5%;
-
 }
 
 #star {
@@ -139,9 +142,9 @@ input {
     text-align: left;
 }
 
-/*-----------------------------------
+/*----------------------------------------------------
     Containers for the recent and favorite locations
---------------------------------------*/
+------------------------------------------------------*/
 *.innerLocations {
     width: 80vw;
     margin-left: 10%;
@@ -168,9 +171,9 @@ input {
     line-height: 6vh;
 }
 
-/* =====================================================
-#directionContainer css for page showing directions and path
-======================================================= */
+/* ================================================================
+    #directionContainer css for page showing directions and path
+=================================================================== */
 #directionContainer {
     display: none;
     background-color: #4046A1;
@@ -194,7 +197,7 @@ input {
 
 /* TESTING FIGURE */
 figure {
-    grid-column: 1/span 100;
+    grid-column: 1/ span 100;
     grid-row: 10/ span 80;
 }
 
@@ -210,6 +213,7 @@ figure img {
     transform: translateX(30vw);
 }
 
+/* Place for images of maps with set paths */
 #sw5se12 {}
 
 #sw5se14 {}
@@ -220,12 +224,14 @@ figure img {
     display: none;
 }
 
+/* Footer in Directions container */
 footer {
-    grid-column: 1/span 100;
+    grid-column: 1/ span 100;
     grid-row: 90/ span 10;
     text-align: center;
 }
 
+/* Footer icon for popping up navigation information */
 #info {
     margin-top: 1vh;
     font-size: 36px;

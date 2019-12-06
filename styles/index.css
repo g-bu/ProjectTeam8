@@ -1,28 +1,28 @@
-
-body, head {
+body,
+head {
   margin: 0;
   padding: 0;
 }
+
 #container {
   background-color: #4046A1;
-  color: #5FC5FA;    
+  color: #5FC5FA;
   display: grid;
-  grid-template-columns: repeat(100,1vw);
-  grid-template-rows: repeat(100,1vh);
+  grid-template-columns: repeat(100, 1vw);
+  grid-template-rows: repeat(100, 1vh);
 }
+
 #firebaseui-auth-container {
   grid-column: 1/span 100;
   grid-row: 50/span 23;
 }
+
 #logo {
   grid-column: 1/span 100;
   grid-row: 1/span 49;
-  /* background-image: url(/Images/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position:center; */
 }
-#logo img{
+
+#logo img {
   width: 100vw;
   height: 50vh;
 }

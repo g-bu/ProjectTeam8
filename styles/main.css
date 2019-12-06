@@ -12,6 +12,9 @@ head {
   background-color: black;
 }
 
+/* ========================
+        Header Styling
+===========================*/
 h1 {
   font-family: Baskerville;
   text-align: center;
@@ -43,6 +46,9 @@ form {
   float: left;
 }
 
+/* ====================
+    Icons in Header 
+=======================*/
 #account {
   margin: 1vh 1vw 0vh 0vw;
   font-size: 36px;
@@ -50,24 +56,6 @@ form {
   color: #5fc5fa;
   background-color: #4046a1;
   border: none;
-}
-
-/*---------------------------------------------
-    CSS for the Account Page Modal
----------------------------------------------*/
-.modal-dialog {
-  width: 250px !important;
-  height: 300px;
-  float: right;
-}
-
-.modal-content {
-  height: 150%;
-}
-
-.modal-body {
-  color: #5FC5FA;
-  line-height: 6vh;
 }
 
 #reverse {
@@ -89,6 +77,27 @@ form {
   grid-row: 19 / span 81;
 }
 
+/* --------------------------------------
+    CSS for the Account Page Modal
+----------------------------------------- */
+.modal-dialog {
+  width: 250px !important;
+  height: 300px;
+  float: right;
+}
+
+.modal-content {
+  height: 150%;
+}
+
+.modal-body {
+  color: #5FC5FA;
+  line-height: 6vh;
+}
+
+/* ===============================================
+    Styling for place markers: sw5, se12, se14 
+==================================================*/
 #sw5 {
   grid-column: 19 / span 5;
   grid-row: 72 / span 5;
@@ -123,6 +132,10 @@ form {
   display: none;
 }
 
+/* ================================================
+    Styling for the pop-up location information
+=================================================== */
+/* sw5 infomation page */
 #htmlForSW5 {
   display: none;
   position: absolute;
@@ -149,13 +162,7 @@ form {
   border-bottom: 1px white dotted;
 }
 
-#htmlForSE12 th {
-  padding-left: 4vw;
-  text-align: left;
-  font-size: 6vw;
-  border-bottom: 1px white dotted;
-}
-
+/* se12 information page */
 #htmlForSE12 {
   display: none;
   position: absolute;
@@ -169,7 +176,7 @@ form {
   color: #5FC5FA;
 }
 
-#htmlForSE14 th {
+#htmlForSE12 th {
   padding-left: 4vw;
   text-align: left;
   font-size: 6vw;
@@ -182,6 +189,7 @@ form {
   border-bottom: 1px white dotted;
 }
 
+/* se14 information page */
 #htmlForSE14 {
   display: none;
   position: absolute;
@@ -193,6 +201,13 @@ form {
   height: 30vh;
   background-color: #4046a1;
   color: #5FC5FA;
+}
+
+#htmlForSE14 th {
+  padding-left: 4vw;
+  text-align: left;
+  font-size: 6vw;
+  border-bottom: 1px white dotted;
 }
 
 #htmlForSE14 td {
